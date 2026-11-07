@@ -57,6 +57,7 @@ SUPPLIER_DEFINITIONS = [
 
 LAYOUTS = ["classic", "modern", "compact"]
 TRICKY_SUPPLIER_NAME = "Ironbark Logistics Pty Ltd"
+TRICKY_SUPPLIER_TERMS_DAYS = 7
 
 CATALOGUE = {
     "office": [
@@ -233,6 +234,9 @@ def make_suppliers() -> list[Supplier]:
                 is_tricky=(name == TRICKY_SUPPLIER_NAME),
             )
         )
+    for supplier in suppliers:
+        if supplier.is_tricky:
+            supplier.payment_terms_days = TRICKY_SUPPLIER_TERMS_DAYS
     return suppliers
 
 
@@ -270,6 +274,9 @@ def make_invoice(
         )
 
     invoice_date = REFERENCE_DATE - timedelta(days=rng.randint(5, 90))
+    if supplier.is_tricky:
+        invoice_date = invoice_date.replace(day=invoice_date.day % 5 + 1)
+
     return GeneratedInvoice(
         file_id=file_id,
         supplier_name=supplier.name,
@@ -412,7 +419,7 @@ def plant_problems(invoices: list[GeneratedInvoice]) -> None:
 
 def render_invoice_pdf(invoice: GeneratedInvoice, supplier: Supplier, pdf_path: Path) -> None:
     layout = LAYOUT_STYLES[supplier.layout]
-    date_format = layout["date_format"]
+    date_format = "%m/%d/%Y" if supplier.is_tricky else layout["date_format"]
     abn_text = format_abn(invoice.supplier_abn) if layout["abn_spaced"] else invoice.supplier_abn
 
     header_lines = [
@@ -442,10 +449,7 @@ def render_invoice_pdf(invoice: GeneratedInvoice, supplier: Supplier, pdf_path: 
     line_table = Table(line_rows, colWidths=[250, 40, 80, 80])
     line_table.setStyle(TableStyle(layout["table_style"] + [("ALIGN", (1, 0), (-1, -1), "RIGHT")]))
 
-    if supplier.is_tricky:
-        total_labels = ["Total", "GST", "Amount Payable"]
-    else:
-        total_labels = ["Subtotal", layout["gst_label"], "Total"]
+    total_labels = ["Subtotal", layout["gst_label"], "Total"]
     totals_table = Table(
         [
             [total_labels[0], format_money(invoice.subtotal)],
