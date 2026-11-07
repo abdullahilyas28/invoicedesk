@@ -1,0 +1,7 @@
+google-genai
+python-dotenv
+pydantic
+reportlab
+pymupdf
+streamlit
+pytest
