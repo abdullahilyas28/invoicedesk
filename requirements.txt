@@ -4,4 +4,4 @@ pydantic
 reportlab
 pymupdf
 streamlit
-pytest
+pytest-e .

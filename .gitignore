@@ -13,3 +13,9 @@ __pycache__/
 # macOS
 .DS_Store._*
 ._*
+
+# Build metadata
+*.egg-info/
+
+# Smoke test output
+data/smoke_test_invoice.pdf
