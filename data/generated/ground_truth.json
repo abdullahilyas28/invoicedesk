@@ -1,0 +1,2067 @@
+[
+  {
+    "file_id": "inv_001",
+    "document_filename": "inv_001.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "abn_checksum",
+    "planted_detail": "abn 68036828486 -> 68036828496",
+    "expected_failed_rules": [
+      "abn_checksum"
+    ],
+    "printed": {
+      "supplier_name": "Harbour Office Supplies Pty Ltd",
+      "supplier_abn": "68036828496",
+      "invoice_number": "HO-01764",
+      "invoice_date": "2026-10-08",
+      "due_date": "2026-11-07",
+      "po_number": "PO-40001",
+      "line_items": [
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 6,
+          "unit_price": "18.90",
+          "amount": "113.40"
+        },
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 2,
+          "unit_price": "36.40",
+          "amount": "72.80"
+        },
+        {
+          "description": "A4 copy paper, box of 5 reams",
+          "quantity": 6,
+          "unit_price": "42.50",
+          "amount": "255.00"
+        },
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 1,
+          "unit_price": "129.00",
+          "amount": "129.00"
+        }
+      ],
+      "subtotal": "570.20",
+      "gst": "57.02",
+      "total": "627.22"
+    }
+  },
+  {
+    "file_id": "inv_002",
+    "document_filename": "inv_002.jpg",
+    "layout": "classic",
+    "is_scanned": true,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Harbour Office Supplies Pty Ltd",
+      "supplier_abn": "68036828486",
+      "invoice_number": "HO-01765",
+      "invoice_date": "2026-10-03",
+      "due_date": "2026-11-02",
+      "po_number": "PO-40002",
+      "line_items": [
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 3,
+          "unit_price": "129.00",
+          "amount": "387.00"
+        }
+      ],
+      "subtotal": "387.00",
+      "gst": "38.70",
+      "total": "425.70"
+    }
+  },
+  {
+    "file_id": "inv_003",
+    "document_filename": "inv_003.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "po_exists",
+    "planted_detail": "po PO-40003 -> PO-99465",
+    "expected_failed_rules": [
+      "po_exists"
+    ],
+    "printed": {
+      "supplier_name": "Harbour Office Supplies Pty Ltd",
+      "supplier_abn": "68036828486",
+      "invoice_number": "HO-01766",
+      "invoice_date": "2026-10-21",
+      "due_date": "2026-11-20",
+      "po_number": "PO-99465",
+      "line_items": [
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 3,
+          "unit_price": "36.40",
+          "amount": "109.20"
+        },
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 3,
+          "unit_price": "18.90",
+          "amount": "56.70"
+        },
+        {
+          "description": "A4 copy paper, box of 5 reams",
+          "quantity": 2,
+          "unit_price": "42.50",
+          "amount": "85.00"
+        },
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 4,
+          "unit_price": "129.00",
+          "amount": "516.00"
+        }
+      ],
+      "subtotal": "766.90",
+      "gst": "76.69",
+      "total": "843.59"
+    }
+  },
+  {
+    "file_id": "inv_004",
+    "document_filename": "inv_004.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Harbour Office Supplies Pty Ltd",
+      "supplier_abn": "68036828486",
+      "invoice_number": "HO-01767",
+      "invoice_date": "2026-10-21",
+      "due_date": "2026-11-20",
+      "po_number": "PO-40004",
+      "line_items": [
+        {
+          "description": "A4 copy paper, box of 5 reams",
+          "quantity": 2,
+          "unit_price": "42.50",
+          "amount": "85.00"
+        }
+      ],
+      "subtotal": "85.00",
+      "gst": "8.50",
+      "total": "93.50"
+    }
+  },
+  {
+    "file_id": "inv_005",
+    "document_filename": "inv_005.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Harbour Office Supplies Pty Ltd",
+      "supplier_abn": "68036828486",
+      "invoice_number": "HO-01768",
+      "invoice_date": "2026-09-17",
+      "due_date": "2026-10-17",
+      "po_number": "PO-40005",
+      "line_items": [
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 6,
+          "unit_price": "18.90",
+          "amount": "113.40"
+        },
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 6,
+          "unit_price": "36.40",
+          "amount": "218.40"
+        }
+      ],
+      "subtotal": "331.80",
+      "gst": "33.18",
+      "total": "364.98"
+    }
+  },
+  {
+    "file_id": "inv_006",
+    "document_filename": "inv_006.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Southbank Stationery Co",
+      "supplier_abn": "78307734975",
+      "invoice_number": "SS-04505",
+      "invoice_date": "2026-08-18",
+      "due_date": "2026-08-25",
+      "po_number": "PO-40006",
+      "line_items": [
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 1,
+          "unit_price": "129.00",
+          "amount": "129.00"
+        }
+      ],
+      "subtotal": "129.00",
+      "gst": "12.90",
+      "total": "141.90"
+    }
+  },
+  {
+    "file_id": "inv_007",
+    "document_filename": "inv_007.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "duplicate_invoice_number",
+    "planted_detail": "invoice number copied from inv_006",
+    "expected_failed_rules": [
+      "duplicate_invoice_number"
+    ],
+    "printed": {
+      "supplier_name": "Southbank Stationery Co",
+      "supplier_abn": "78307734975",
+      "invoice_number": "SS-04505",
+      "invoice_date": "2026-09-10",
+      "due_date": "2026-09-17",
+      "po_number": "PO-40007",
+      "line_items": [
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 6,
+          "unit_price": "18.90",
+          "amount": "113.40"
+        },
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 5,
+          "unit_price": "36.40",
+          "amount": "182.00"
+        }
+      ],
+      "subtotal": "295.40",
+      "gst": "29.54",
+      "total": "324.94"
+    }
+  },
+  {
+    "file_id": "inv_008",
+    "document_filename": "inv_008.jpg",
+    "layout": "modern",
+    "is_scanned": true,
+    "is_tricky_supplier": false,
+    "planted_problem": "po_exists",
+    "planted_detail": "po PO-40008 -> PO-94029",
+    "expected_failed_rules": [
+      "po_exists"
+    ],
+    "printed": {
+      "supplier_name": "Southbank Stationery Co",
+      "supplier_abn": "78307734975",
+      "invoice_number": "SS-04507",
+      "invoice_date": "2026-09-03",
+      "due_date": "2026-09-10",
+      "po_number": "PO-94029",
+      "line_items": [
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 3,
+          "unit_price": "129.00",
+          "amount": "387.00"
+        },
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 5,
+          "unit_price": "18.90",
+          "amount": "94.50"
+        },
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 1,
+          "unit_price": "36.40",
+          "amount": "36.40"
+        }
+      ],
+      "subtotal": "517.90",
+      "gst": "51.79",
+      "total": "569.69"
+    }
+  },
+  {
+    "file_id": "inv_009",
+    "document_filename": "inv_009.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Southbank Stationery Co",
+      "supplier_abn": "78307734975",
+      "invoice_number": "SS-04508",
+      "invoice_date": "2026-10-11",
+      "due_date": "2026-10-18",
+      "po_number": "PO-40009",
+      "line_items": [
+        {
+          "description": "A4 copy paper, box of 5 reams",
+          "quantity": 4,
+          "unit_price": "42.50",
+          "amount": "170.00"
+        },
+        {
+          "description": "Lever arch files, pack of 10",
+          "quantity": 2,
+          "unit_price": "36.40",
+          "amount": "72.80"
+        },
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 3,
+          "unit_price": "18.90",
+          "amount": "56.70"
+        }
+      ],
+      "subtotal": "299.50",
+      "gst": "29.95",
+      "total": "329.45"
+    }
+  },
+  {
+    "file_id": "inv_010",
+    "document_filename": "inv_010.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Southbank Stationery Co",
+      "supplier_abn": "78307734975",
+      "invoice_number": "SS-04509",
+      "invoice_date": "2026-09-05",
+      "due_date": "2026-09-12",
+      "po_number": "PO-40010",
+      "line_items": [
+        {
+          "description": "Ballpoint pens, box of 50",
+          "quantity": 3,
+          "unit_price": "18.90",
+          "amount": "56.70"
+        },
+        {
+          "description": "Toner cartridge, black",
+          "quantity": 3,
+          "unit_price": "129.00",
+          "amount": "387.00"
+        }
+      ],
+      "subtotal": "443.70",
+      "gst": "44.37",
+      "total": "488.07"
+    }
+  },
+  {
+    "file_id": "inv_011",
+    "document_filename": "inv_011.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Brightway Commercial Cleaning",
+      "supplier_abn": "94754445328",
+      "invoice_number": "BC-04683",
+      "invoice_date": "2026-09-10",
+      "due_date": "2026-10-10",
+      "po_number": "PO-40011",
+      "line_items": [
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 6,
+          "unit_price": "64.75",
+          "amount": "388.50"
+        },
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 5,
+          "unit_price": "95.00",
+          "amount": "475.00"
+        },
+        {
+          "description": "Window cleaning, ground floor",
+          "quantity": 2,
+          "unit_price": "140.00",
+          "amount": "280.00"
+        }
+      ],
+      "subtotal": "1143.50",
+      "gst": "114.35",
+      "total": "1257.85"
+    }
+  },
+  {
+    "file_id": "inv_012",
+    "document_filename": "inv_012.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Brightway Commercial Cleaning",
+      "supplier_abn": "94754445328",
+      "invoice_number": "BC-04684",
+      "invoice_date": "2026-08-06",
+      "due_date": "2026-09-05",
+      "po_number": "PO-40012",
+      "line_items": [
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 4,
+          "unit_price": "95.00",
+          "amount": "380.00"
+        }
+      ],
+      "subtotal": "380.00",
+      "gst": "38.00",
+      "total": "418.00"
+    }
+  },
+  {
+    "file_id": "inv_013",
+    "document_filename": "inv_013.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "gst_rate",
+    "planted_detail": "gst 37.00 -> 0.00",
+    "expected_failed_rules": [
+      "gst_rate"
+    ],
+    "printed": {
+      "supplier_name": "Brightway Commercial Cleaning",
+      "supplier_abn": "94754445328",
+      "invoice_number": "BC-04685",
+      "invoice_date": "2026-08-30",
+      "due_date": "2026-09-29",
+      "po_number": "PO-40013",
+      "line_items": [
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 2,
+          "unit_price": "185.00",
+          "amount": "370.00"
+        }
+      ],
+      "subtotal": "370.00",
+      "gst": "0.00",
+      "total": "370.00"
+    }
+  },
+  {
+    "file_id": "inv_014",
+    "document_filename": "inv_014.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "duplicate_invoice_number",
+    "planted_detail": "invoice number copied from inv_011",
+    "expected_failed_rules": [
+      "duplicate_invoice_number"
+    ],
+    "printed": {
+      "supplier_name": "Brightway Commercial Cleaning",
+      "supplier_abn": "94754445328",
+      "invoice_number": "BC-04683",
+      "invoice_date": "2026-10-22",
+      "due_date": "2026-11-21",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 2,
+          "unit_price": "185.00",
+          "amount": "370.00"
+        },
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 5,
+          "unit_price": "64.75",
+          "amount": "323.75"
+        }
+      ],
+      "subtotal": "693.75",
+      "gst": "69.38",
+      "total": "763.13"
+    }
+  },
+  {
+    "file_id": "inv_015",
+    "document_filename": "inv_015.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Brightway Commercial Cleaning",
+      "supplier_abn": "94754445328",
+      "invoice_number": "BC-04687",
+      "invoice_date": "2026-09-07",
+      "due_date": "2026-10-07",
+      "po_number": "PO-40014",
+      "line_items": [
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 2,
+          "unit_price": "95.00",
+          "amount": "190.00"
+        }
+      ],
+      "subtotal": "190.00",
+      "gst": "19.00",
+      "total": "209.00"
+    }
+  },
+  {
+    "file_id": "inv_016",
+    "document_filename": "inv_016.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "gst_rate",
+    "planted_detail": "gst 33.00 -> 0.00",
+    "expected_failed_rules": [
+      "gst_rate"
+    ],
+    "printed": {
+      "supplier_name": "Yarra Hygiene Services Pty Ltd",
+      "supplier_abn": "21244424542",
+      "invoice_number": "YH-06595",
+      "invoice_date": "2026-08-28",
+      "due_date": "2026-09-04",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 2,
+          "unit_price": "95.00",
+          "amount": "190.00"
+        },
+        {
+          "description": "Window cleaning, ground floor",
+          "quantity": 1,
+          "unit_price": "140.00",
+          "amount": "140.00"
+        }
+      ],
+      "subtotal": "330.00",
+      "gst": "0.00",
+      "total": "330.00"
+    }
+  },
+  {
+    "file_id": "inv_017",
+    "document_filename": "inv_017.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Yarra Hygiene Services Pty Ltd",
+      "supplier_abn": "21244424542",
+      "invoice_number": "YH-06596",
+      "invoice_date": "2026-09-11",
+      "due_date": "2026-09-18",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 6,
+          "unit_price": "95.00",
+          "amount": "570.00"
+        },
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 5,
+          "unit_price": "64.75",
+          "amount": "323.75"
+        },
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 4,
+          "unit_price": "185.00",
+          "amount": "740.00"
+        }
+      ],
+      "subtotal": "1633.75",
+      "gst": "163.38",
+      "total": "1797.13"
+    }
+  },
+  {
+    "file_id": "inv_018",
+    "document_filename": "inv_018.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "date_order",
+    "planted_detail": "due date 2026-08-10 -> 2026-07-20",
+    "expected_failed_rules": [
+      "date_order"
+    ],
+    "printed": {
+      "supplier_name": "Yarra Hygiene Services Pty Ltd",
+      "supplier_abn": "21244424542",
+      "invoice_number": "YH-06597",
+      "invoice_date": "2026-08-03",
+      "due_date": "2026-07-20",
+      "po_number": "PO-40015",
+      "line_items": [
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 6,
+          "unit_price": "185.00",
+          "amount": "1110.00"
+        },
+        {
+          "description": "Window cleaning, ground floor",
+          "quantity": 5,
+          "unit_price": "140.00",
+          "amount": "700.00"
+        },
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 3,
+          "unit_price": "64.75",
+          "amount": "194.25"
+        }
+      ],
+      "subtotal": "2004.25",
+      "gst": "200.43",
+      "total": "2204.68"
+    }
+  },
+  {
+    "file_id": "inv_019",
+    "document_filename": "inv_019.jpg",
+    "layout": "classic",
+    "is_scanned": true,
+    "is_tricky_supplier": false,
+    "planted_problem": "subtotal_sum",
+    "planted_detail": "subtotal 1838.50 -> 1938.50",
+    "expected_failed_rules": [
+      "subtotal_sum"
+    ],
+    "printed": {
+      "supplier_name": "Yarra Hygiene Services Pty Ltd",
+      "supplier_abn": "21244424542",
+      "invoice_number": "YH-06598",
+      "invoice_date": "2026-09-27",
+      "due_date": "2026-10-04",
+      "po_number": "PO-40016",
+      "line_items": [
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 6,
+          "unit_price": "64.75",
+          "amount": "388.50"
+        },
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 4,
+          "unit_price": "185.00",
+          "amount": "740.00"
+        },
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 6,
+          "unit_price": "95.00",
+          "amount": "570.00"
+        },
+        {
+          "description": "Window cleaning, ground floor",
+          "quantity": 1,
+          "unit_price": "140.00",
+          "amount": "140.00"
+        }
+      ],
+      "subtotal": "1938.50",
+      "gst": "193.85",
+      "total": "2132.35"
+    }
+  },
+  {
+    "file_id": "inv_020",
+    "document_filename": "inv_020.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "subtotal_sum",
+    "planted_detail": "subtotal 1379.75 -> 1479.75",
+    "expected_failed_rules": [
+      "subtotal_sum"
+    ],
+    "printed": {
+      "supplier_name": "Yarra Hygiene Services Pty Ltd",
+      "supplier_abn": "21244424542",
+      "invoice_number": "YH-06599",
+      "invoice_date": "2026-09-01",
+      "due_date": "2026-09-08",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Washroom consumables restock",
+          "quantity": 1,
+          "unit_price": "64.75",
+          "amount": "64.75"
+        },
+        {
+          "description": "Window cleaning, ground floor",
+          "quantity": 4,
+          "unit_price": "140.00",
+          "amount": "560.00"
+        },
+        {
+          "description": "Carpet steam clean, per room",
+          "quantity": 6,
+          "unit_price": "95.00",
+          "amount": "570.00"
+        },
+        {
+          "description": "Office clean, standard visit",
+          "quantity": 1,
+          "unit_price": "185.00",
+          "amount": "185.00"
+        }
+      ],
+      "subtotal": "1479.75",
+      "gst": "147.98",
+      "total": "1627.73"
+    }
+  },
+  {
+    "file_id": "inv_021",
+    "document_filename": "inv_021.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "abn_checksum",
+    "planted_detail": "abn 10520090879 -> 10520090819",
+    "expected_failed_rules": [
+      "abn_checksum"
+    ],
+    "printed": {
+      "supplier_name": "Lumen Bay IT Solutions Pty Ltd",
+      "supplier_abn": "10520090819",
+      "invoice_number": "LB-01075",
+      "invoice_date": "2026-08-10",
+      "due_date": "2026-08-24",
+      "po_number": "PO-40017",
+      "line_items": [
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 6,
+          "unit_price": "145.00",
+          "amount": "870.00"
+        },
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 4,
+          "unit_price": "389.00",
+          "amount": "1556.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 5,
+          "unit_price": "650.00",
+          "amount": "3250.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 6,
+          "unit_price": "120.00",
+          "amount": "720.00"
+        }
+      ],
+      "subtotal": "6396.00",
+      "gst": "639.60",
+      "total": "7035.60"
+    }
+  },
+  {
+    "file_id": "inv_022",
+    "document_filename": "inv_022.jpg",
+    "layout": "modern",
+    "is_scanned": true,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Lumen Bay IT Solutions Pty Ltd",
+      "supplier_abn": "10520090879",
+      "invoice_number": "LB-01076",
+      "invoice_date": "2026-08-04",
+      "due_date": "2026-08-18",
+      "po_number": "PO-40018",
+      "line_items": [
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 5,
+          "unit_price": "389.00",
+          "amount": "1945.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 3,
+          "unit_price": "120.00",
+          "amount": "360.00"
+        },
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 5,
+          "unit_price": "145.00",
+          "amount": "725.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 3,
+          "unit_price": "650.00",
+          "amount": "1950.00"
+        }
+      ],
+      "subtotal": "4980.00",
+      "gst": "498.00",
+      "total": "5478.00"
+    }
+  },
+  {
+    "file_id": "inv_023",
+    "document_filename": "inv_023.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Lumen Bay IT Solutions Pty Ltd",
+      "supplier_abn": "10520090879",
+      "invoice_number": "LB-01077",
+      "invoice_date": "2026-08-10",
+      "due_date": "2026-08-24",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 6,
+          "unit_price": "120.00",
+          "amount": "720.00"
+        },
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 2,
+          "unit_price": "389.00",
+          "amount": "778.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 6,
+          "unit_price": "650.00",
+          "amount": "3900.00"
+        },
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 3,
+          "unit_price": "145.00",
+          "amount": "435.00"
+        }
+      ],
+      "subtotal": "5833.00",
+      "gst": "583.30",
+      "total": "6416.30"
+    }
+  },
+  {
+    "file_id": "inv_024",
+    "document_filename": "inv_024.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "abn_checksum",
+    "planted_detail": "abn 10520090879 -> 10500090879",
+    "expected_failed_rules": [
+      "abn_checksum"
+    ],
+    "printed": {
+      "supplier_name": "Lumen Bay IT Solutions Pty Ltd",
+      "supplier_abn": "10500090879",
+      "invoice_number": "LB-01078",
+      "invoice_date": "2026-10-07",
+      "due_date": "2026-10-21",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 5,
+          "unit_price": "389.00",
+          "amount": "1945.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 1,
+          "unit_price": "650.00",
+          "amount": "650.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 3,
+          "unit_price": "120.00",
+          "amount": "360.00"
+        },
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 5,
+          "unit_price": "145.00",
+          "amount": "725.00"
+        }
+      ],
+      "subtotal": "3680.00",
+      "gst": "368.00",
+      "total": "4048.00"
+    }
+  },
+  {
+    "file_id": "inv_025",
+    "document_filename": "inv_025.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "gst_rate",
+    "planted_detail": "gst 241.70 -> 362.55",
+    "expected_failed_rules": [
+      "gst_rate"
+    ],
+    "printed": {
+      "supplier_name": "Lumen Bay IT Solutions Pty Ltd",
+      "supplier_abn": "10520090879",
+      "invoice_number": "LB-01079",
+      "invoice_date": "2026-09-12",
+      "due_date": "2026-09-26",
+      "po_number": "PO-40019",
+      "line_items": [
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 3,
+          "unit_price": "389.00",
+          "amount": "1167.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 1,
+          "unit_price": "650.00",
+          "amount": "650.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 5,
+          "unit_price": "120.00",
+          "amount": "600.00"
+        }
+      ],
+      "subtotal": "2417.00",
+      "gst": "362.55",
+      "total": "2779.55"
+    }
+  },
+  {
+    "file_id": "inv_026",
+    "document_filename": "inv_026.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Bayside Network Services",
+      "supplier_abn": "22426535955",
+      "invoice_number": "BN-02186",
+      "invoice_date": "2026-08-15",
+      "due_date": "2026-08-29",
+      "po_number": "PO-40020",
+      "line_items": [
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 5,
+          "unit_price": "650.00",
+          "amount": "3250.00"
+        },
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 5,
+          "unit_price": "145.00",
+          "amount": "725.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 3,
+          "unit_price": "120.00",
+          "amount": "360.00"
+        },
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 2,
+          "unit_price": "389.00",
+          "amount": "778.00"
+        }
+      ],
+      "subtotal": "5113.00",
+      "gst": "511.30",
+      "total": "5624.30"
+    }
+  },
+  {
+    "file_id": "inv_027",
+    "document_filename": "inv_027.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "line_maths",
+    "planted_detail": "'Network switch, 24-port' amount 389.00 -> 399.00",
+    "expected_failed_rules": [
+      "line_maths"
+    ],
+    "printed": {
+      "supplier_name": "Bayside Network Services",
+      "supplier_abn": "22426535955",
+      "invoice_number": "BN-02187",
+      "invoice_date": "2026-10-25",
+      "due_date": "2026-11-08",
+      "po_number": "PO-40021",
+      "line_items": [
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 1,
+          "unit_price": "389.00",
+          "amount": "399.00"
+        },
+        {
+          "description": "Laptop setup and imaging",
+          "quantity": 6,
+          "unit_price": "120.00",
+          "amount": "720.00"
+        }
+      ],
+      "subtotal": "1119.00",
+      "gst": "111.90",
+      "total": "1230.90"
+    }
+  },
+  {
+    "file_id": "inv_028",
+    "document_filename": "inv_028.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Bayside Network Services",
+      "supplier_abn": "22426535955",
+      "invoice_number": "BN-02188",
+      "invoice_date": "2026-08-08",
+      "due_date": "2026-08-22",
+      "po_number": "PO-40022",
+      "line_items": [
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 5,
+          "unit_price": "145.00",
+          "amount": "725.00"
+        }
+      ],
+      "subtotal": "725.00",
+      "gst": "72.50",
+      "total": "797.50"
+    }
+  },
+  {
+    "file_id": "inv_029",
+    "document_filename": "inv_029.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "line_maths",
+    "planted_detail": "'On-site callout, per hour' amount 725.00 -> 726.00",
+    "expected_failed_rules": [
+      "line_maths"
+    ],
+    "printed": {
+      "supplier_name": "Bayside Network Services",
+      "supplier_abn": "22426535955",
+      "invoice_number": "BN-02189",
+      "invoice_date": "2026-09-16",
+      "due_date": "2026-09-30",
+      "po_number": "PO-40023",
+      "line_items": [
+        {
+          "description": "On-site callout, per hour",
+          "quantity": 5,
+          "unit_price": "145.00",
+          "amount": "726.00"
+        }
+      ],
+      "subtotal": "726.00",
+      "gst": "72.60",
+      "total": "798.60"
+    }
+  },
+  {
+    "file_id": "inv_030",
+    "document_filename": "inv_030.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "duplicate_invoice_number",
+    "planted_detail": "invoice number copied from inv_026",
+    "expected_failed_rules": [
+      "duplicate_invoice_number"
+    ],
+    "printed": {
+      "supplier_name": "Bayside Network Services",
+      "supplier_abn": "22426535955",
+      "invoice_number": "BN-02186",
+      "invoice_date": "2026-09-02",
+      "due_date": "2026-09-16",
+      "po_number": "PO-40024",
+      "line_items": [
+        {
+          "description": "Network switch, 24-port",
+          "quantity": 6,
+          "unit_price": "389.00",
+          "amount": "2334.00"
+        },
+        {
+          "description": "Managed IT support, monthly",
+          "quantity": 3,
+          "unit_price": "650.00",
+          "amount": "1950.00"
+        }
+      ],
+      "subtotal": "4284.00",
+      "gst": "428.40",
+      "total": "4712.40"
+    }
+  },
+  {
+    "file_id": "inv_031",
+    "document_filename": "inv_031.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Little Collins Catering",
+      "supplier_abn": "74359482396",
+      "invoice_number": "LC-04356",
+      "invoice_date": "2026-09-23",
+      "due_date": "2026-10-23",
+      "po_number": "PO-40025",
+      "line_items": [
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 2,
+          "unit_price": "12.80",
+          "amount": "25.60"
+        },
+        {
+          "description": "Fruit box delivery",
+          "quantity": 1,
+          "unit_price": "49.00",
+          "amount": "49.00"
+        }
+      ],
+      "subtotal": "74.60",
+      "gst": "7.46",
+      "total": "82.06"
+    }
+  },
+  {
+    "file_id": "inv_032",
+    "document_filename": "inv_032.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Little Collins Catering",
+      "supplier_abn": "74359482396",
+      "invoice_number": "LC-04357",
+      "invoice_date": "2026-09-19",
+      "due_date": "2026-10-19",
+      "po_number": "PO-40026",
+      "line_items": [
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 1,
+          "unit_price": "12.80",
+          "amount": "12.80"
+        },
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 2,
+          "unit_price": "165.00",
+          "amount": "330.00"
+        },
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 4,
+          "unit_price": "38.50",
+          "amount": "154.00"
+        }
+      ],
+      "subtotal": "496.80",
+      "gst": "49.68",
+      "total": "546.48"
+    }
+  },
+  {
+    "file_id": "inv_033",
+    "document_filename": "inv_033.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Little Collins Catering",
+      "supplier_abn": "74359482396",
+      "invoice_number": "LC-04358",
+      "invoice_date": "2026-08-06",
+      "due_date": "2026-09-05",
+      "po_number": "PO-40027",
+      "line_items": [
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 4,
+          "unit_price": "165.00",
+          "amount": "660.00"
+        },
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 1,
+          "unit_price": "12.80",
+          "amount": "12.80"
+        }
+      ],
+      "subtotal": "672.80",
+      "gst": "67.28",
+      "total": "740.08"
+    }
+  },
+  {
+    "file_id": "inv_034",
+    "document_filename": "inv_034.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "date_order",
+    "planted_detail": "due date 2026-09-15 -> 2026-08-08",
+    "expected_failed_rules": [
+      "date_order"
+    ],
+    "printed": {
+      "supplier_name": "Little Collins Catering",
+      "supplier_abn": "74359482396",
+      "invoice_number": "LC-04359",
+      "invoice_date": "2026-08-16",
+      "due_date": "2026-08-08",
+      "po_number": "PO-40028",
+      "line_items": [
+        {
+          "description": "Fruit box delivery",
+          "quantity": 1,
+          "unit_price": "49.00",
+          "amount": "49.00"
+        },
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 1,
+          "unit_price": "38.50",
+          "amount": "38.50"
+        }
+      ],
+      "subtotal": "87.50",
+      "gst": "8.75",
+      "total": "96.25"
+    }
+  },
+  {
+    "file_id": "inv_035",
+    "document_filename": "inv_035.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Little Collins Catering",
+      "supplier_abn": "74359482396",
+      "invoice_number": "LC-04360",
+      "invoice_date": "2026-08-26",
+      "due_date": "2026-09-25",
+      "po_number": "PO-40029",
+      "line_items": [
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 5,
+          "unit_price": "12.80",
+          "amount": "64.00"
+        },
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 2,
+          "unit_price": "38.50",
+          "amount": "77.00"
+        },
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 4,
+          "unit_price": "165.00",
+          "amount": "660.00"
+        }
+      ],
+      "subtotal": "801.00",
+      "gst": "80.10",
+      "total": "881.10"
+    }
+  },
+  {
+    "file_id": "inv_036",
+    "document_filename": "inv_036.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "subtotal_sum",
+    "planted_detail": "subtotal 939.80 -> 1039.80",
+    "expected_failed_rules": [
+      "subtotal_sum"
+    ],
+    "printed": {
+      "supplier_name": "Greenfield Coffee Roasters Pty Ltd",
+      "supplier_abn": "48688152940",
+      "invoice_number": "GC-08235",
+      "invoice_date": "2026-09-29",
+      "due_date": "2026-10-29",
+      "po_number": "PO-40030",
+      "line_items": [
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 4,
+          "unit_price": "38.50",
+          "amount": "154.00"
+        },
+        {
+          "description": "Fruit box delivery",
+          "quantity": 1,
+          "unit_price": "49.00",
+          "amount": "49.00"
+        },
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 6,
+          "unit_price": "12.80",
+          "amount": "76.80"
+        },
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 4,
+          "unit_price": "165.00",
+          "amount": "660.00"
+        }
+      ],
+      "subtotal": "1039.80",
+      "gst": "103.98",
+      "total": "1143.78"
+    }
+  },
+  {
+    "file_id": "inv_037",
+    "document_filename": "inv_037.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Greenfield Coffee Roasters Pty Ltd",
+      "supplier_abn": "48688152940",
+      "invoice_number": "GC-08236",
+      "invoice_date": "2026-09-19",
+      "due_date": "2026-10-19",
+      "po_number": "PO-40031",
+      "line_items": [
+        {
+          "description": "Fruit box delivery",
+          "quantity": 5,
+          "unit_price": "49.00",
+          "amount": "245.00"
+        },
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 4,
+          "unit_price": "12.80",
+          "amount": "51.20"
+        }
+      ],
+      "subtotal": "296.20",
+      "gst": "29.62",
+      "total": "325.82"
+    }
+  },
+  {
+    "file_id": "inv_038",
+    "document_filename": "inv_038.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Greenfield Coffee Roasters Pty Ltd",
+      "supplier_abn": "48688152940",
+      "invoice_number": "GC-08237",
+      "invoice_date": "2026-09-21",
+      "due_date": "2026-10-21",
+      "po_number": "PO-40032",
+      "line_items": [
+        {
+          "description": "Fruit box delivery",
+          "quantity": 5,
+          "unit_price": "49.00",
+          "amount": "245.00"
+        }
+      ],
+      "subtotal": "245.00",
+      "gst": "24.50",
+      "total": "269.50"
+    }
+  },
+  {
+    "file_id": "inv_039",
+    "document_filename": "inv_039.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "line_maths",
+    "planted_detail": "'Morning tea package, per person' amount 12.80 -> 13.80",
+    "expected_failed_rules": [
+      "line_maths"
+    ],
+    "printed": {
+      "supplier_name": "Greenfield Coffee Roasters Pty Ltd",
+      "supplier_abn": "48688152940",
+      "invoice_number": "GC-08238",
+      "invoice_date": "2026-10-13",
+      "due_date": "2026-11-12",
+      "po_number": "PO-40033",
+      "line_items": [
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 5,
+          "unit_price": "165.00",
+          "amount": "825.00"
+        },
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 3,
+          "unit_price": "38.50",
+          "amount": "115.50"
+        },
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 1,
+          "unit_price": "12.80",
+          "amount": "13.80"
+        },
+        {
+          "description": "Fruit box delivery",
+          "quantity": 1,
+          "unit_price": "49.00",
+          "amount": "49.00"
+        }
+      ],
+      "subtotal": "1003.30",
+      "gst": "100.33",
+      "total": "1103.63"
+    }
+  },
+  {
+    "file_id": "inv_040",
+    "document_filename": "inv_040.pdf",
+    "layout": "modern",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "total_sum",
+    "planted_detail": "total 1062.60 -> 1162.60",
+    "expected_failed_rules": [
+      "total_sum"
+    ],
+    "printed": {
+      "supplier_name": "Greenfield Coffee Roasters Pty Ltd",
+      "supplier_abn": "48688152940",
+      "invoice_number": "GC-08239",
+      "invoice_date": "2026-10-01",
+      "due_date": "2026-10-31",
+      "po_number": "PO-40034",
+      "line_items": [
+        {
+          "description": "Coffee beans, 1kg",
+          "quantity": 2,
+          "unit_price": "38.50",
+          "amount": "77.00"
+        },
+        {
+          "description": "Working lunch platter, serves 10",
+          "quantity": 5,
+          "unit_price": "165.00",
+          "amount": "825.00"
+        },
+        {
+          "description": "Morning tea package, per person",
+          "quantity": 5,
+          "unit_price": "12.80",
+          "amount": "64.00"
+        }
+      ],
+      "subtotal": "966.00",
+      "gst": "96.60",
+      "total": "1162.60"
+    }
+  },
+  {
+    "file_id": "inv_041",
+    "document_filename": "inv_041.jpg",
+    "layout": "compact",
+    "is_scanned": true,
+    "is_tricky_supplier": false,
+    "planted_problem": "total_sum",
+    "planted_detail": "total 1123.43 -> 1173.43",
+    "expected_failed_rules": [
+      "total_sum"
+    ],
+    "printed": {
+      "supplier_name": "Kestrel Couriers Pty Ltd",
+      "supplier_abn": "35732289603",
+      "invoice_number": "KC-07009",
+      "invoice_date": "2026-09-28",
+      "due_date": "2026-10-28",
+      "po_number": "PO-40035",
+      "line_items": [
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 1,
+          "unit_price": "28.00",
+          "amount": "28.00"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 3,
+          "unit_price": "46.20",
+          "amount": "138.60"
+        },
+        {
+          "description": "Pallet transport, metro",
+          "quantity": 4,
+          "unit_price": "210.00",
+          "amount": "840.00"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 2,
+          "unit_price": "7.35",
+          "amount": "14.70"
+        }
+      ],
+      "subtotal": "1021.30",
+      "gst": "102.13",
+      "total": "1173.43"
+    }
+  },
+  {
+    "file_id": "inv_042",
+    "document_filename": "inv_042.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "total_sum",
+    "planted_detail": "total 1386.00 -> 1486.00",
+    "expected_failed_rules": [
+      "total_sum"
+    ],
+    "printed": {
+      "supplier_name": "Kestrel Couriers Pty Ltd",
+      "supplier_abn": "35732289603",
+      "invoice_number": "KC-07010",
+      "invoice_date": "2026-10-27",
+      "due_date": "2026-11-26",
+      "po_number": "PO-40036",
+      "line_items": [
+        {
+          "description": "Pallet transport, metro",
+          "quantity": 6,
+          "unit_price": "210.00",
+          "amount": "1260.00"
+        }
+      ],
+      "subtotal": "1260.00",
+      "gst": "126.00",
+      "total": "1486.00"
+    }
+  },
+  {
+    "file_id": "inv_043",
+    "document_filename": "inv_043.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "po_exists",
+    "planted_detail": "po None -> PO-94030",
+    "expected_failed_rules": [
+      "po_exists"
+    ],
+    "printed": {
+      "supplier_name": "Kestrel Couriers Pty Ltd",
+      "supplier_abn": "35732289603",
+      "invoice_number": "KC-07011",
+      "invoice_date": "2026-10-16",
+      "due_date": "2026-11-15",
+      "po_number": "PO-94030",
+      "line_items": [
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 1,
+          "unit_price": "28.00",
+          "amount": "28.00"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 3,
+          "unit_price": "7.35",
+          "amount": "22.05"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 4,
+          "unit_price": "46.20",
+          "amount": "184.80"
+        }
+      ],
+      "subtotal": "234.85",
+      "gst": "23.49",
+      "total": "258.34"
+    }
+  },
+  {
+    "file_id": "inv_044",
+    "document_filename": "inv_044.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": "date_order",
+    "planted_detail": "due date 2026-10-07 -> 2026-08-25",
+    "expected_failed_rules": [
+      "date_order"
+    ],
+    "printed": {
+      "supplier_name": "Kestrel Couriers Pty Ltd",
+      "supplier_abn": "35732289603",
+      "invoice_number": "KC-07012",
+      "invoice_date": "2026-09-07",
+      "due_date": "2026-08-25",
+      "po_number": "PO-40037",
+      "line_items": [
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 6,
+          "unit_price": "46.20",
+          "amount": "277.20"
+        }
+      ],
+      "subtotal": "277.20",
+      "gst": "27.72",
+      "total": "304.92"
+    }
+  },
+  {
+    "file_id": "inv_045",
+    "document_filename": "inv_045.pdf",
+    "layout": "compact",
+    "is_scanned": false,
+    "is_tricky_supplier": false,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Kestrel Couriers Pty Ltd",
+      "supplier_abn": "35732289603",
+      "invoice_number": "KC-07013",
+      "invoice_date": "2026-10-10",
+      "due_date": "2026-11-09",
+      "po_number": "PO-40038",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 1,
+          "unit_price": "7.35",
+          "amount": "7.35"
+        },
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 2,
+          "unit_price": "28.00",
+          "amount": "56.00"
+        },
+        {
+          "description": "Pallet transport, metro",
+          "quantity": 5,
+          "unit_price": "210.00",
+          "amount": "1050.00"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 2,
+          "unit_price": "46.20",
+          "amount": "92.40"
+        }
+      ],
+      "subtotal": "1205.75",
+      "gst": "120.58",
+      "total": "1326.33"
+    }
+  },
+  {
+    "file_id": "inv_046",
+    "document_filename": "inv_046.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06209",
+      "invoice_date": "2026-09-03",
+      "due_date": "2026-09-17",
+      "po_number": "PO-40039",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 4,
+          "unit_price": "7.35",
+          "amount": "29.40"
+        }
+      ],
+      "subtotal": "29.40",
+      "gst": "2.94",
+      "total": "32.34"
+    }
+  },
+  {
+    "file_id": "inv_047",
+    "document_filename": "inv_047.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06210",
+      "invoice_date": "2026-08-14",
+      "due_date": "2026-08-28",
+      "po_number": "PO-40040",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 3,
+          "unit_price": "7.35",
+          "amount": "22.05"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 4,
+          "unit_price": "46.20",
+          "amount": "184.80"
+        }
+      ],
+      "subtotal": "206.85",
+      "gst": "20.69",
+      "total": "227.54"
+    }
+  },
+  {
+    "file_id": "inv_048",
+    "document_filename": "inv_048.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06211",
+      "invoice_date": "2026-09-17",
+      "due_date": "2026-10-01",
+      "po_number": "PO-40041",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 4,
+          "unit_price": "7.35",
+          "amount": "29.40"
+        },
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 3,
+          "unit_price": "28.00",
+          "amount": "84.00"
+        }
+      ],
+      "subtotal": "113.40",
+      "gst": "11.34",
+      "total": "124.74"
+    }
+  },
+  {
+    "file_id": "inv_049",
+    "document_filename": "inv_049.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06212",
+      "invoice_date": "2026-09-07",
+      "due_date": "2026-09-21",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 6,
+          "unit_price": "28.00",
+          "amount": "168.00"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 5,
+          "unit_price": "46.20",
+          "amount": "231.00"
+        },
+        {
+          "description": "Pallet transport, metro",
+          "quantity": 3,
+          "unit_price": "210.00",
+          "amount": "630.00"
+        }
+      ],
+      "subtotal": "1029.00",
+      "gst": "102.90",
+      "total": "1131.90"
+    }
+  },
+  {
+    "file_id": "inv_050",
+    "document_filename": "inv_050.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06213",
+      "invoice_date": "2026-09-26",
+      "due_date": "2026-10-10",
+      "po_number": "PO-40042",
+      "line_items": [
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 4,
+          "unit_price": "46.20",
+          "amount": "184.80"
+        },
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 1,
+          "unit_price": "28.00",
+          "amount": "28.00"
+        }
+      ],
+      "subtotal": "212.80",
+      "gst": "21.28",
+      "total": "234.08"
+    }
+  },
+  {
+    "file_id": "inv_051",
+    "document_filename": "inv_051.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06214",
+      "invoice_date": "2026-09-24",
+      "due_date": "2026-10-08",
+      "po_number": "PO-40043",
+      "line_items": [
+        {
+          "description": "Fuel surcharge",
+          "quantity": 5,
+          "unit_price": "7.35",
+          "amount": "36.75"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 2,
+          "unit_price": "46.20",
+          "amount": "92.40"
+        }
+      ],
+      "subtotal": "129.15",
+      "gst": "12.92",
+      "total": "142.07"
+    }
+  },
+  {
+    "file_id": "inv_052",
+    "document_filename": "inv_052.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06215",
+      "invoice_date": "2026-10-12",
+      "due_date": "2026-10-26",
+      "po_number": "PO-40044",
+      "line_items": [
+        {
+          "description": "Pallet transport, metro",
+          "quantity": 4,
+          "unit_price": "210.00",
+          "amount": "840.00"
+        },
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 5,
+          "unit_price": "28.00",
+          "amount": "140.00"
+        },
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 6,
+          "unit_price": "46.20",
+          "amount": "277.20"
+        },
+        {
+          "description": "Fuel surcharge",
+          "quantity": 1,
+          "unit_price": "7.35",
+          "amount": "7.35"
+        }
+      ],
+      "subtotal": "1264.55",
+      "gst": "126.46",
+      "total": "1391.01"
+    }
+  },
+  {
+    "file_id": "inv_053",
+    "document_filename": "inv_053.pdf",
+    "layout": "classic",
+    "is_scanned": false,
+    "is_tricky_supplier": true,
+    "planted_problem": null,
+    "planted_detail": null,
+    "expected_failed_rules": [],
+    "printed": {
+      "supplier_name": "Ironbark Logistics Pty Ltd",
+      "supplier_abn": "16240535704",
+      "invoice_number": "IL-06216",
+      "invoice_date": "2026-09-28",
+      "due_date": "2026-10-12",
+      "po_number": null,
+      "line_items": [
+        {
+          "description": "Interstate parcel, up to 5kg",
+          "quantity": 5,
+          "unit_price": "46.20",
+          "amount": "231.00"
+        },
+        {
+          "description": "Same-day metro delivery",
+          "quantity": 2,
+          "unit_price": "28.00",
+          "amount": "56.00"
+        }
+      ],
+      "subtotal": "287.00",
+      "gst": "28.70",
+      "total": "315.70"
+    }
+  }
+]

@@ -11,7 +11,7 @@ __pycache__/
 *.db
 
 # macOS
-.DS_Store._*
+.DS_Store
 ._*
 
 # Build metadata

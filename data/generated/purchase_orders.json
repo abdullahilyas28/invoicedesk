@@ -1,0 +1,946 @@
+[
+  {
+    "po_number": "PO-40001",
+    "supplier_abn": "68036828486",
+    "lines": [
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 6,
+        "unit_price": "18.90",
+        "amount": "113.40"
+      },
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 2,
+        "unit_price": "36.40",
+        "amount": "72.80"
+      },
+      {
+        "description": "A4 copy paper, box of 5 reams",
+        "quantity": 6,
+        "unit_price": "42.50",
+        "amount": "255.00"
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 1,
+        "unit_price": "129.00",
+        "amount": "129.00"
+      }
+    ],
+    "approved_subtotal": "570.20"
+  },
+  {
+    "po_number": "PO-40002",
+    "supplier_abn": "68036828486",
+    "lines": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 3,
+        "unit_price": "129.00",
+        "amount": "387.00"
+      }
+    ],
+    "approved_subtotal": "387.00"
+  },
+  {
+    "po_number": "PO-40003",
+    "supplier_abn": "68036828486",
+    "lines": [
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 3,
+        "unit_price": "36.40",
+        "amount": "109.20"
+      },
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 3,
+        "unit_price": "18.90",
+        "amount": "56.70"
+      },
+      {
+        "description": "A4 copy paper, box of 5 reams",
+        "quantity": 2,
+        "unit_price": "42.50",
+        "amount": "85.00"
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 4,
+        "unit_price": "129.00",
+        "amount": "516.00"
+      }
+    ],
+    "approved_subtotal": "766.90"
+  },
+  {
+    "po_number": "PO-40004",
+    "supplier_abn": "68036828486",
+    "lines": [
+      {
+        "description": "A4 copy paper, box of 5 reams",
+        "quantity": 2,
+        "unit_price": "42.50",
+        "amount": "85.00"
+      }
+    ],
+    "approved_subtotal": "85.00"
+  },
+  {
+    "po_number": "PO-40005",
+    "supplier_abn": "68036828486",
+    "lines": [
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 6,
+        "unit_price": "18.90",
+        "amount": "113.40"
+      },
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 6,
+        "unit_price": "36.40",
+        "amount": "218.40"
+      }
+    ],
+    "approved_subtotal": "331.80"
+  },
+  {
+    "po_number": "PO-40006",
+    "supplier_abn": "78307734975",
+    "lines": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 1,
+        "unit_price": "129.00",
+        "amount": "129.00"
+      }
+    ],
+    "approved_subtotal": "129.00"
+  },
+  {
+    "po_number": "PO-40007",
+    "supplier_abn": "78307734975",
+    "lines": [
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 6,
+        "unit_price": "18.90",
+        "amount": "113.40"
+      },
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 5,
+        "unit_price": "36.40",
+        "amount": "182.00"
+      }
+    ],
+    "approved_subtotal": "295.40"
+  },
+  {
+    "po_number": "PO-40008",
+    "supplier_abn": "78307734975",
+    "lines": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 3,
+        "unit_price": "129.00",
+        "amount": "387.00"
+      },
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 5,
+        "unit_price": "18.90",
+        "amount": "94.50"
+      },
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 1,
+        "unit_price": "36.40",
+        "amount": "36.40"
+      }
+    ],
+    "approved_subtotal": "517.90"
+  },
+  {
+    "po_number": "PO-40009",
+    "supplier_abn": "78307734975",
+    "lines": [
+      {
+        "description": "A4 copy paper, box of 5 reams",
+        "quantity": 4,
+        "unit_price": "42.50",
+        "amount": "170.00"
+      },
+      {
+        "description": "Lever arch files, pack of 10",
+        "quantity": 2,
+        "unit_price": "36.40",
+        "amount": "72.80"
+      },
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 3,
+        "unit_price": "18.90",
+        "amount": "56.70"
+      }
+    ],
+    "approved_subtotal": "299.50"
+  },
+  {
+    "po_number": "PO-40010",
+    "supplier_abn": "78307734975",
+    "lines": [
+      {
+        "description": "Ballpoint pens, box of 50",
+        "quantity": 3,
+        "unit_price": "18.90",
+        "amount": "56.70"
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 3,
+        "unit_price": "129.00",
+        "amount": "387.00"
+      }
+    ],
+    "approved_subtotal": "443.70"
+  },
+  {
+    "po_number": "PO-40011",
+    "supplier_abn": "94754445328",
+    "lines": [
+      {
+        "description": "Washroom consumables restock",
+        "quantity": 6,
+        "unit_price": "64.75",
+        "amount": "388.50"
+      },
+      {
+        "description": "Carpet steam clean, per room",
+        "quantity": 5,
+        "unit_price": "95.00",
+        "amount": "475.00"
+      },
+      {
+        "description": "Window cleaning, ground floor",
+        "quantity": 2,
+        "unit_price": "140.00",
+        "amount": "280.00"
+      }
+    ],
+    "approved_subtotal": "1143.50"
+  },
+  {
+    "po_number": "PO-40012",
+    "supplier_abn": "94754445328",
+    "lines": [
+      {
+        "description": "Carpet steam clean, per room",
+        "quantity": 4,
+        "unit_price": "95.00",
+        "amount": "380.00"
+      }
+    ],
+    "approved_subtotal": "380.00"
+  },
+  {
+    "po_number": "PO-40013",
+    "supplier_abn": "94754445328",
+    "lines": [
+      {
+        "description": "Office clean, standard visit",
+        "quantity": 2,
+        "unit_price": "185.00",
+        "amount": "370.00"
+      }
+    ],
+    "approved_subtotal": "370.00"
+  },
+  {
+    "po_number": "PO-40014",
+    "supplier_abn": "94754445328",
+    "lines": [
+      {
+        "description": "Carpet steam clean, per room",
+        "quantity": 2,
+        "unit_price": "95.00",
+        "amount": "190.00"
+      }
+    ],
+    "approved_subtotal": "190.00"
+  },
+  {
+    "po_number": "PO-40015",
+    "supplier_abn": "21244424542",
+    "lines": [
+      {
+        "description": "Office clean, standard visit",
+        "quantity": 6,
+        "unit_price": "185.00",
+        "amount": "1110.00"
+      },
+      {
+        "description": "Window cleaning, ground floor",
+        "quantity": 5,
+        "unit_price": "140.00",
+        "amount": "700.00"
+      },
+      {
+        "description": "Washroom consumables restock",
+        "quantity": 3,
+        "unit_price": "64.75",
+        "amount": "194.25"
+      }
+    ],
+    "approved_subtotal": "2004.25"
+  },
+  {
+    "po_number": "PO-40016",
+    "supplier_abn": "21244424542",
+    "lines": [
+      {
+        "description": "Washroom consumables restock",
+        "quantity": 6,
+        "unit_price": "64.75",
+        "amount": "388.50"
+      },
+      {
+        "description": "Office clean, standard visit",
+        "quantity": 4,
+        "unit_price": "185.00",
+        "amount": "740.00"
+      },
+      {
+        "description": "Carpet steam clean, per room",
+        "quantity": 6,
+        "unit_price": "95.00",
+        "amount": "570.00"
+      },
+      {
+        "description": "Window cleaning, ground floor",
+        "quantity": 1,
+        "unit_price": "140.00",
+        "amount": "140.00"
+      }
+    ],
+    "approved_subtotal": "1838.50"
+  },
+  {
+    "po_number": "PO-40017",
+    "supplier_abn": "10520090879",
+    "lines": [
+      {
+        "description": "On-site callout, per hour",
+        "quantity": 6,
+        "unit_price": "145.00",
+        "amount": "870.00"
+      },
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 4,
+        "unit_price": "389.00",
+        "amount": "1556.00"
+      },
+      {
+        "description": "Managed IT support, monthly",
+        "quantity": 5,
+        "unit_price": "650.00",
+        "amount": "3250.00"
+      },
+      {
+        "description": "Laptop setup and imaging",
+        "quantity": 6,
+        "unit_price": "120.00",
+        "amount": "720.00"
+      }
+    ],
+    "approved_subtotal": "6396.00"
+  },
+  {
+    "po_number": "PO-40018",
+    "supplier_abn": "10520090879",
+    "lines": [
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 5,
+        "unit_price": "389.00",
+        "amount": "1945.00"
+      },
+      {
+        "description": "Laptop setup and imaging",
+        "quantity": 3,
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "On-site callout, per hour",
+        "quantity": 5,
+        "unit_price": "145.00",
+        "amount": "725.00"
+      },
+      {
+        "description": "Managed IT support, monthly",
+        "quantity": 3,
+        "unit_price": "650.00",
+        "amount": "1950.00"
+      }
+    ],
+    "approved_subtotal": "4980.00"
+  },
+  {
+    "po_number": "PO-40019",
+    "supplier_abn": "10520090879",
+    "lines": [
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 3,
+        "unit_price": "389.00",
+        "amount": "1167.00"
+      },
+      {
+        "description": "Managed IT support, monthly",
+        "quantity": 1,
+        "unit_price": "650.00",
+        "amount": "650.00"
+      },
+      {
+        "description": "Laptop setup and imaging",
+        "quantity": 5,
+        "unit_price": "120.00",
+        "amount": "600.00"
+      }
+    ],
+    "approved_subtotal": "2417.00"
+  },
+  {
+    "po_number": "PO-40020",
+    "supplier_abn": "22426535955",
+    "lines": [
+      {
+        "description": "Managed IT support, monthly",
+        "quantity": 5,
+        "unit_price": "650.00",
+        "amount": "3250.00"
+      },
+      {
+        "description": "On-site callout, per hour",
+        "quantity": 5,
+        "unit_price": "145.00",
+        "amount": "725.00"
+      },
+      {
+        "description": "Laptop setup and imaging",
+        "quantity": 3,
+        "unit_price": "120.00",
+        "amount": "360.00"
+      },
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 2,
+        "unit_price": "389.00",
+        "amount": "778.00"
+      }
+    ],
+    "approved_subtotal": "5113.00"
+  },
+  {
+    "po_number": "PO-40021",
+    "supplier_abn": "22426535955",
+    "lines": [
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 1,
+        "unit_price": "389.00",
+        "amount": "389.00"
+      },
+      {
+        "description": "Laptop setup and imaging",
+        "quantity": 6,
+        "unit_price": "120.00",
+        "amount": "720.00"
+      }
+    ],
+    "approved_subtotal": "1109.00"
+  },
+  {
+    "po_number": "PO-40022",
+    "supplier_abn": "22426535955",
+    "lines": [
+      {
+        "description": "On-site callout, per hour",
+        "quantity": 5,
+        "unit_price": "145.00",
+        "amount": "725.00"
+      }
+    ],
+    "approved_subtotal": "725.00"
+  },
+  {
+    "po_number": "PO-40023",
+    "supplier_abn": "22426535955",
+    "lines": [
+      {
+        "description": "On-site callout, per hour",
+        "quantity": 5,
+        "unit_price": "145.00",
+        "amount": "725.00"
+      }
+    ],
+    "approved_subtotal": "725.00"
+  },
+  {
+    "po_number": "PO-40024",
+    "supplier_abn": "22426535955",
+    "lines": [
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 6,
+        "unit_price": "389.00",
+        "amount": "2334.00"
+      },
+      {
+        "description": "Managed IT support, monthly",
+        "quantity": 3,
+        "unit_price": "650.00",
+        "amount": "1950.00"
+      }
+    ],
+    "approved_subtotal": "4284.00"
+  },
+  {
+    "po_number": "PO-40025",
+    "supplier_abn": "74359482396",
+    "lines": [
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 2,
+        "unit_price": "12.80",
+        "amount": "25.60"
+      },
+      {
+        "description": "Fruit box delivery",
+        "quantity": 1,
+        "unit_price": "49.00",
+        "amount": "49.00"
+      }
+    ],
+    "approved_subtotal": "74.60"
+  },
+  {
+    "po_number": "PO-40026",
+    "supplier_abn": "74359482396",
+    "lines": [
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 1,
+        "unit_price": "12.80",
+        "amount": "12.80"
+      },
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 2,
+        "unit_price": "165.00",
+        "amount": "330.00"
+      },
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 4,
+        "unit_price": "38.50",
+        "amount": "154.00"
+      }
+    ],
+    "approved_subtotal": "496.80"
+  },
+  {
+    "po_number": "PO-40027",
+    "supplier_abn": "74359482396",
+    "lines": [
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 4,
+        "unit_price": "165.00",
+        "amount": "660.00"
+      },
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 1,
+        "unit_price": "12.80",
+        "amount": "12.80"
+      }
+    ],
+    "approved_subtotal": "672.80"
+  },
+  {
+    "po_number": "PO-40028",
+    "supplier_abn": "74359482396",
+    "lines": [
+      {
+        "description": "Fruit box delivery",
+        "quantity": 1,
+        "unit_price": "49.00",
+        "amount": "49.00"
+      },
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 1,
+        "unit_price": "38.50",
+        "amount": "38.50"
+      }
+    ],
+    "approved_subtotal": "87.50"
+  },
+  {
+    "po_number": "PO-40029",
+    "supplier_abn": "74359482396",
+    "lines": [
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 5,
+        "unit_price": "12.80",
+        "amount": "64.00"
+      },
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 2,
+        "unit_price": "38.50",
+        "amount": "77.00"
+      },
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 4,
+        "unit_price": "165.00",
+        "amount": "660.00"
+      }
+    ],
+    "approved_subtotal": "801.00"
+  },
+  {
+    "po_number": "PO-40030",
+    "supplier_abn": "48688152940",
+    "lines": [
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 4,
+        "unit_price": "38.50",
+        "amount": "154.00"
+      },
+      {
+        "description": "Fruit box delivery",
+        "quantity": 1,
+        "unit_price": "49.00",
+        "amount": "49.00"
+      },
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 6,
+        "unit_price": "12.80",
+        "amount": "76.80"
+      },
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 4,
+        "unit_price": "165.00",
+        "amount": "660.00"
+      }
+    ],
+    "approved_subtotal": "939.80"
+  },
+  {
+    "po_number": "PO-40031",
+    "supplier_abn": "48688152940",
+    "lines": [
+      {
+        "description": "Fruit box delivery",
+        "quantity": 5,
+        "unit_price": "49.00",
+        "amount": "245.00"
+      },
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 4,
+        "unit_price": "12.80",
+        "amount": "51.20"
+      }
+    ],
+    "approved_subtotal": "296.20"
+  },
+  {
+    "po_number": "PO-40032",
+    "supplier_abn": "48688152940",
+    "lines": [
+      {
+        "description": "Fruit box delivery",
+        "quantity": 5,
+        "unit_price": "49.00",
+        "amount": "245.00"
+      }
+    ],
+    "approved_subtotal": "245.00"
+  },
+  {
+    "po_number": "PO-40033",
+    "supplier_abn": "48688152940",
+    "lines": [
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 5,
+        "unit_price": "165.00",
+        "amount": "825.00"
+      },
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 3,
+        "unit_price": "38.50",
+        "amount": "115.50"
+      },
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 1,
+        "unit_price": "12.80",
+        "amount": "12.80"
+      },
+      {
+        "description": "Fruit box delivery",
+        "quantity": 1,
+        "unit_price": "49.00",
+        "amount": "49.00"
+      }
+    ],
+    "approved_subtotal": "1002.30"
+  },
+  {
+    "po_number": "PO-40034",
+    "supplier_abn": "48688152940",
+    "lines": [
+      {
+        "description": "Coffee beans, 1kg",
+        "quantity": 2,
+        "unit_price": "38.50",
+        "amount": "77.00"
+      },
+      {
+        "description": "Working lunch platter, serves 10",
+        "quantity": 5,
+        "unit_price": "165.00",
+        "amount": "825.00"
+      },
+      {
+        "description": "Morning tea package, per person",
+        "quantity": 5,
+        "unit_price": "12.80",
+        "amount": "64.00"
+      }
+    ],
+    "approved_subtotal": "966.00"
+  },
+  {
+    "po_number": "PO-40035",
+    "supplier_abn": "35732289603",
+    "lines": [
+      {
+        "description": "Same-day metro delivery",
+        "quantity": 1,
+        "unit_price": "28.00",
+        "amount": "28.00"
+      },
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 3,
+        "unit_price": "46.20",
+        "amount": "138.60"
+      },
+      {
+        "description": "Pallet transport, metro",
+        "quantity": 4,
+        "unit_price": "210.00",
+        "amount": "840.00"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": 2,
+        "unit_price": "7.35",
+        "amount": "14.70"
+      }
+    ],
+    "approved_subtotal": "1021.30"
+  },
+  {
+    "po_number": "PO-40036",
+    "supplier_abn": "35732289603",
+    "lines": [
+      {
+        "description": "Pallet transport, metro",
+        "quantity": 6,
+        "unit_price": "210.00",
+        "amount": "1260.00"
+      }
+    ],
+    "approved_subtotal": "1260.00"
+  },
+  {
+    "po_number": "PO-40037",
+    "supplier_abn": "35732289603",
+    "lines": [
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 6,
+        "unit_price": "46.20",
+        "amount": "277.20"
+      }
+    ],
+    "approved_subtotal": "277.20"
+  },
+  {
+    "po_number": "PO-40038",
+    "supplier_abn": "35732289603",
+    "lines": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 1,
+        "unit_price": "7.35",
+        "amount": "7.35"
+      },
+      {
+        "description": "Same-day metro delivery",
+        "quantity": 2,
+        "unit_price": "28.00",
+        "amount": "56.00"
+      },
+      {
+        "description": "Pallet transport, metro",
+        "quantity": 5,
+        "unit_price": "210.00",
+        "amount": "1050.00"
+      },
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 2,
+        "unit_price": "46.20",
+        "amount": "92.40"
+      }
+    ],
+    "approved_subtotal": "1205.75"
+  },
+  {
+    "po_number": "PO-40039",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 4,
+        "unit_price": "7.35",
+        "amount": "29.40"
+      }
+    ],
+    "approved_subtotal": "29.40"
+  },
+  {
+    "po_number": "PO-40040",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 3,
+        "unit_price": "7.35",
+        "amount": "22.05"
+      },
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 4,
+        "unit_price": "46.20",
+        "amount": "184.80"
+      }
+    ],
+    "approved_subtotal": "206.85"
+  },
+  {
+    "po_number": "PO-40041",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 4,
+        "unit_price": "7.35",
+        "amount": "29.40"
+      },
+      {
+        "description": "Same-day metro delivery",
+        "quantity": 3,
+        "unit_price": "28.00",
+        "amount": "84.00"
+      }
+    ],
+    "approved_subtotal": "113.40"
+  },
+  {
+    "po_number": "PO-40042",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 4,
+        "unit_price": "46.20",
+        "amount": "184.80"
+      },
+      {
+        "description": "Same-day metro delivery",
+        "quantity": 1,
+        "unit_price": "28.00",
+        "amount": "28.00"
+      }
+    ],
+    "approved_subtotal": "212.80"
+  },
+  {
+    "po_number": "PO-40043",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Fuel surcharge",
+        "quantity": 5,
+        "unit_price": "7.35",
+        "amount": "36.75"
+      },
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 2,
+        "unit_price": "46.20",
+        "amount": "92.40"
+      }
+    ],
+    "approved_subtotal": "129.15"
+  },
+  {
+    "po_number": "PO-40044",
+    "supplier_abn": "16240535704",
+    "lines": [
+      {
+        "description": "Pallet transport, metro",
+        "quantity": 4,
+        "unit_price": "210.00",
+        "amount": "840.00"
+      },
+      {
+        "description": "Same-day metro delivery",
+        "quantity": 5,
+        "unit_price": "28.00",
+        "amount": "140.00"
+      },
+      {
+        "description": "Interstate parcel, up to 5kg",
+        "quantity": 6,
+        "unit_price": "46.20",
+        "amount": "277.20"
+      },
+      {
+        "description": "Fuel surcharge",
+        "quantity": 1,
+        "unit_price": "7.35",
+        "amount": "7.35"
+      }
+    ],
+    "approved_subtotal": "1264.55"
+  }
+]
