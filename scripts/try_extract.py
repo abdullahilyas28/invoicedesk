@@ -28,6 +28,7 @@ def main(file_id: str) -> None:
     print(f"  line items: got {len(result.invoice.line_items)}, expected {len(record['printed']['line_items'])}")
     llm_result = result.llm_result
     print(f"  {llm_result.input_tokens} in / {llm_result.output_tokens} out tokens, {llm_result.latency_seconds:.1f}s")
+    print(f"  from cache: {result.from_cache}")
 
 
 if __name__ == "__main__":

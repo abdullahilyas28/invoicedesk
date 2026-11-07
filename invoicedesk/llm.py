@@ -10,10 +10,15 @@ from google import genai
 from google.genai import types
 from pydantic import BaseModel
 
+import random
+from google.genai import errors
+
 load_dotenv()
 
 MODEL_NAME = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
 REQUESTS_PER_MINUTE = int(os.environ.get("GEMINI_RPM", "15"))
+MAX_ATTEMPTS = 4
+RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
 client = genai.Client()
 
@@ -62,9 +67,8 @@ def generate(prompt: str, file_path: str | Path | None = None, schema: type[Base
             response_schema=schema,
         )
 
-    _wait_for_rate_limit()
     start_time = time.perf_counter()
-    response = client.models.generate_content(model=model, contents=contents, config=config)
+    response = _call_with_retry(model, contents, config)
     latency_seconds = time.perf_counter() - start_time
 
     usage = response.usage_metadata
@@ -76,3 +80,15 @@ def generate(prompt: str, file_path: str | Path | None = None, schema: type[Base
         output_tokens=usage.candidates_token_count or 0,
         latency_seconds=latency_seconds,
     )
+
+def _call_with_retry(model: str, contents: list, config: types.GenerateContentConfig | None):
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        _wait_for_rate_limit()
+        try:
+            return client.models.generate_content(model=model, contents=contents, config=config)
+        except errors.APIError as error:
+            if error.code not in RETRYABLE_STATUS_CODES or attempt == MAX_ATTEMPTS:
+                raise
+            backoff_seconds = 2 ** attempt + random.uniform(0, 1)
+            print(f"  [llm] error {error.code} on attempt {attempt}, retrying in {backoff_seconds:.1f}s")
+            time.sleep(backoff_seconds)
