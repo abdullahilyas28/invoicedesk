@@ -38,6 +38,12 @@ CREATE TABLE IF NOT EXISTS corrections (
     correct_value TEXT,
     created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE IF NOT EXISTS ticket_resolutions (
+    ticket_id TEXT PRIMARY KEY,
+    resolution_json TEXT NOT NULL,
+    updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
 """
 
 UNREVIEWED_STATUSES = ("auto_approved", "needs_review")
@@ -192,3 +198,25 @@ def get_corrections_for_supplier(supplier_key: str, limit: int = 10) -> list[tup
             (supplier_key, limit),
         ).fetchall()
     return [tuple(row) for row in rows]
+
+
+# ---------------------------------------------------------------------------
+# Ticket resolutions
+# ---------------------------------------------------------------------------
+
+
+def save_ticket_resolution(ticket_id: str, resolution_json: str) -> None:
+    with closing(get_connection()) as connection, connection:
+        connection.execute(
+            "INSERT OR REPLACE INTO ticket_resolutions (ticket_id, resolution_json) VALUES (?, ?)",
+            (ticket_id, resolution_json),
+        )
+
+
+def list_ticket_resolutions() -> dict[str, str]:
+    """
+    ticket_id -> resolution_json for every stored resolution.
+    """
+    with closing(get_connection()) as connection:
+        rows = connection.execute("SELECT ticket_id, resolution_json FROM ticket_resolutions").fetchall()
+    return {row["ticket_id"]: row["resolution_json"] for row in rows}

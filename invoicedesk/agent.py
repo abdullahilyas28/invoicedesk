@@ -1,6 +1,8 @@
 """Resolution agent: reads a supplier ticket, calls backend tools under the policy, submits a resolution."""
 from dataclasses import dataclass, field
 from pathlib import Path
+import json
+from dataclasses import asdict, dataclass, field
 
 from google.genai import types
 
@@ -163,3 +165,12 @@ def resolve_ticket(ticket: dict, dry_run: bool = True) -> TicketResolution:
     resolution.action, resolution.stopped_reason = "escalate", "tool_call_limit"
     resolution.reply = "Thanks for your email. We've passed it to our accounts-payable team, who will be in touch."
     return resolution
+
+def resolution_to_json(resolution: TicketResolution) -> str:
+    return json.dumps(asdict(resolution))
+
+
+def resolution_from_json(text: str) -> TicketResolution:
+    data = json.loads(text)
+    data["tool_calls"] = [ToolCallRecord(**tool_call) for tool_call in data["tool_calls"]]
+    return TicketResolution(**data)

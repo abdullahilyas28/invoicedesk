@@ -81,7 +81,14 @@ NEEDS_HUMAN_TEMPLATES = [
 
 def date_alternatives(iso_text: str) -> list[str]:
     value = date.fromisoformat(iso_text)
-    return [iso_text, f"{value.day} {value:%B %Y}", f"{value.day} {value:%b %Y}", f"{value:%d/%m/%Y}"]
+    return [
+        iso_text,
+        f"{value.day} {value:%B %Y}",
+        f"{value.day} {value:%b %Y}",
+        f"{value:%d/%m/%Y}",
+        f"{value:%B} {value.day}, {value.year}",
+        f"{value:%b} {value.day}, {value.year}",
+    ]
 
 
 def main() -> None:
