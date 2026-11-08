@@ -199,6 +199,10 @@ def get_corrections_for_supplier(supplier_key: str, limit: int = 10) -> list[tup
         ).fetchall()
     return [tuple(row) for row in rows]
 
+def list_corrections() -> list[sqlite3.Row]:
+    with closing(get_connection()) as connection:
+        return connection.execute("SELECT * FROM corrections ORDER BY correction_id").fetchall()
+    
 
 # ---------------------------------------------------------------------------
 # Ticket resolutions
