@@ -44,7 +44,7 @@ def test_payment_status_shows_the_shortfall(backend_db):
 
 def test_dry_run_credit_changes_nothing(backend_db):
     result = issue_credit("inv_short_small", "125.50", "short payment", dry_run=True, db_path=backend_db)
-    assert result["status"] == "dry_run"
+    assert result == {"status": "credited", "invoice_id": "inv_short_small", "amount": "125.50", "dry_run": True}
     assert get_payment_status("inv_short_small", db_path=backend_db)["outstanding"] == "125.50"
 
 

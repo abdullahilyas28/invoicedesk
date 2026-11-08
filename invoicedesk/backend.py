@@ -162,19 +162,21 @@ def issue_credit(invoice_id: str, amount: str, reason: str, *, dry_run: bool, db
     if credit_amount > verified_shortfall:
         return refused(f"the verified shortfall on this invoice is only {verified_shortfall}")
 
+    credit_result = {"status": "credited", "invoice_id": invoice_id, "amount": f"{credit_amount:.2f}"}
     if dry_run:
-        return {"status": "dry_run", "invoice_id": invoice_id, "would_credit": f"{credit_amount:.2f}"}
+        return {**credit_result, "dry_run": True}
     with closing(get_backend_connection(db_path)) as connection, connection:
         connection.execute(
             "INSERT INTO credits (invoice_id, amount, reason, approved_by) VALUES (?, ?, ?, 'agent')",
             (invoice_id, f"{credit_amount:.2f}", reason),
         )
-    return {"status": "credited", "invoice_id": invoice_id, "amount": f"{credit_amount:.2f}"}
+    return credit_result
 
 
 def escalate_to_human(reason: str, *, ticket_id: str, dry_run: bool, db_path: Path = BACKEND_DB_PATH) -> dict:
+    escalation_result = {"status": "escalated", "ticket_id": ticket_id}
     if dry_run:
-        return {"status": "dry_run", "would_escalate": ticket_id, "reason": reason}
+        return {**escalation_result, "dry_run": True}
     with closing(get_backend_connection(db_path)) as connection, connection:
         connection.execute("INSERT INTO escalations (ticket_id, reason) VALUES (?, ?)", (ticket_id, reason))
-    return {"status": "escalated", "ticket_id": ticket_id}
+    return escalation_result

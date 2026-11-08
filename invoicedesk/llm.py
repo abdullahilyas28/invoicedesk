@@ -81,6 +81,16 @@ def generate(prompt: str, file_path: str | Path | None = None, schema: type[Base
         latency_seconds=latency_seconds,
     )
 
+def call_model(contents: list, config: types.GenerateContentConfig, model: str = MODEL_NAME) -> tuple[types.GenerateContentResponse, int, int, float]:
+    """
+    One raw model turn for multi-turn tool use. Returns (response, input_tokens, output_tokens, latency).
+    """
+    start_time = time.perf_counter()
+    response = _call_with_retry(model, contents, config)
+    latency_seconds = time.perf_counter() - start_time
+    usage = response.usage_metadata
+    return response, usage.prompt_token_count or 0, usage.candidates_token_count or 0, latency_seconds
+
 def _call_with_retry(model: str, contents: list, config: types.GenerateContentConfig | None):
     for attempt in range(1, MAX_ATTEMPTS + 1):
         _wait_for_rate_limit()
