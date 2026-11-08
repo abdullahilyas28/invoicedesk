@@ -20,7 +20,17 @@ REQUESTS_PER_MINUTE = int(os.environ.get("GEMINI_RPM", "15"))
 MAX_ATTEMPTS = 4
 RETRYABLE_STATUS_CODES = {429, 500, 502, 503, 504}
 
-client = genai.Client()
+_client: genai.Client | None = None
+
+
+def get_client() -> genai.Client:
+    """
+    Create the Gemini client on first use, so importing this module never needs an API key.
+    """
+    global _client
+    if _client is None:
+        _client = genai.Client()
+    return _client
 
 
 @dataclass
@@ -95,7 +105,7 @@ def _call_with_retry(model: str, contents: list, config: types.GenerateContentCo
     for attempt in range(1, MAX_ATTEMPTS + 1):
         _wait_for_rate_limit()
         try:
-            return client.models.generate_content(model=model, contents=contents, config=config)
+            return get_client().models.generate_content(model=model, contents=contents, config=config)
         except errors.APIError as error:
             if error.code not in RETRYABLE_STATUS_CODES or attempt == MAX_ATTEMPTS:
                 raise
