@@ -6,6 +6,7 @@ import streamlit as st
 
 from invoicedesk.agent import resolution_from_json, resolution_to_json, resolve_ticket
 from invoicedesk.db import list_ticket_resolutions, save_ticket_resolution
+from invoicedesk.settings import DEMO_MODE
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "generated"
 ACTION_STYLES = {"answer": st.info, "credit": st.success, "escalate": st.warning}
@@ -51,7 +52,7 @@ with email_column:
     st.subheader("Email")
     st.markdown(f"**From:** {ticket['from']}  \n**Subject:** {ticket['subject']}")
     st.text(ticket["body"])
-    if st.button("Run the agent on this ticket (dry run)"):
+    if not DEMO_MODE and st.button("Run the agent on this ticket (dry run)"):
         with st.spinner("The agent is working on it..."):
             new_resolution = resolve_ticket(ticket, dry_run=True)
         save_ticket_resolution(selected_ticket_id, resolution_to_json(new_resolution))

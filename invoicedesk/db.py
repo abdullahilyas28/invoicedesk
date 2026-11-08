@@ -2,8 +2,10 @@
 import sqlite3
 from contextlib import closing
 from pathlib import Path
+import shutil
 
 DB_PATH = Path(__file__).parent.parent / "data" / "invoicedesk.db"
+DEMO_DB_PATH = Path(__file__).parent.parent / "data" / "demo" / "invoicedesk.db"
 
 SCHEMA = """
 CREATE TABLE IF NOT EXISTS extraction_cache (
@@ -50,6 +52,8 @@ UNREVIEWED_STATUSES = ("auto_approved", "needs_review")
 
 
 def get_connection() -> sqlite3.Connection:
+    if not DB_PATH.exists() and DEMO_DB_PATH.exists():
+        shutil.copyfile(DEMO_DB_PATH, DB_PATH)
     connection = sqlite3.connect(DB_PATH)
     connection.row_factory = sqlite3.Row
     connection.executescript(SCHEMA)
@@ -163,6 +167,13 @@ def clear_processed_invoices() -> None:
     with closing(get_connection()) as connection, connection:
         connection.execute("DELETE FROM processed_invoices")
 
+def reset_review_state() -> None:
+    """
+    emo reset: forget all corrections and pipeline results. Cache and agent runs are kept.
+    """
+    with closing(get_connection()) as connection, connection:
+        connection.execute("DELETE FROM corrections")
+        connection.execute("DELETE FROM processed_invoices")
 
 # ---------------------------------------------------------------------------
 # Corrections

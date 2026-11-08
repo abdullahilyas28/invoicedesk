@@ -9,6 +9,7 @@ __pycache__/
 
 # Generated data
 *.db
+!data/demo/invoicedesk.db
 
 # macOS
 .DS_Store

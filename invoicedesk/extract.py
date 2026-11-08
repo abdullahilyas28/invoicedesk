@@ -29,6 +29,8 @@ class ExtractionResult:
     from_cache: bool
     used_memory: bool = False
 
+class CacheMissError(LookupError):
+    """Raised in cache-only mode when a document has no cached extraction."""
 
 def make_cache_key(document_path: Path, run_number: int, memory_instructions: str) -> str:
     document_hash = hashlib.sha256(Path(document_path).read_bytes()).hexdigest()
@@ -39,12 +41,7 @@ def make_cache_key(document_path: Path, run_number: int, memory_instructions: st
     return cache_key
 
 
-def extract_invoice(
-    document_path: str | Path,
-    run_number: int = 1,
-    memory_instructions: str = "",
-    date_order: DateOrder = "DMY",
-) -> ExtractionResult:
+def extract_invoice(document_path: str | Path, run_number: int = 1, memory_instructions: str = "", date_order: DateOrder = "DMY", cache_only: bool = False) -> ExtractionResult:
     cache_key = make_cache_key(document_path, run_number, memory_instructions)
     cached_row = get_cached_response(cache_key)
 
@@ -58,6 +55,8 @@ def extract_invoice(
             latency_seconds=cached_row["latency_seconds"],
         )
         from_cache = True
+    elif cache_only:
+        raise CacheMissError(f"No cached extraction for {Path(document_path).name}")
     else:
         prompt = EXTRACTION_PROMPT + memory_instructions
         llm_result = generate(prompt, file_path=document_path, schema=ExtractedInvoice)
