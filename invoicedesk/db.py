@@ -40,12 +40,19 @@ CREATE TABLE IF NOT EXISTS corrections (
 );
 """
 
+UNREVIEWED_STATUSES = ("auto_approved", "needs_review")
+
 
 def get_connection() -> sqlite3.Connection:
     connection = sqlite3.connect(DB_PATH)
     connection.row_factory = sqlite3.Row
     connection.executescript(SCHEMA)
     return connection
+
+
+# ---------------------------------------------------------------------------
+# Extraction cache
+# ---------------------------------------------------------------------------
 
 
 def get_cached_response(cache_key: str) -> sqlite3.Row | None:
@@ -73,6 +80,12 @@ def save_cached_response(
             (cache_key, response_text, model, input_tokens, output_tokens, latency_seconds),
         )
 
+
+# ---------------------------------------------------------------------------
+# Processed invoices
+# ---------------------------------------------------------------------------
+
+
 def save_processed_invoice(
     file_id: str,
     document_filename: str,
@@ -83,13 +96,26 @@ def save_processed_invoice(
     route: str,
     status: str,
 ) -> None:
+    """
+    Insert or update an invoice's pipeline result, but never overwrite one a human has reviewed.
+    """
     with closing(get_connection()) as connection, connection:
         connection.execute(
-            """
-            INSERT OR REPLACE INTO processed_invoices
+            f"""
+            INSERT INTO processed_invoices
                 (file_id, document_filename, supplier_name, extracted_json, confidence_json,
                  review_reasons_json, route, status)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ON CONFLICT(file_id) DO UPDATE SET
+                document_filename = excluded.document_filename,
+                supplier_name = excluded.supplier_name,
+                extracted_json = excluded.extracted_json,
+                confidence_json = excluded.confidence_json,
+                review_reasons_json = excluded.review_reasons_json,
+                route = excluded.route,
+                status = excluded.status,
+                updated_at = CURRENT_TIMESTAMP
+            WHERE processed_invoices.status IN {UNREVIEWED_STATUSES}
             """,
             (file_id, document_filename, supplier_name, extracted_json, confidence_json,
              review_reasons_json, route, status),
@@ -112,10 +138,6 @@ def get_processed_invoice(file_id: str) -> sqlite3.Row | None:
         ).fetchone()
 
 
-def clear_processed_invoices() -> None:
-    with closing(get_connection()) as connection, connection:
-        connection.execute("DELETE FROM processed_invoices")
-
 def save_review(file_id: str, reviewed_json: str, status: str) -> None:
     with closing(get_connection()) as connection, connection:
         connection.execute(
@@ -128,8 +150,22 @@ def save_review(file_id: str, reviewed_json: str, status: str) -> None:
         )
 
 
+def clear_processed_invoices() -> None:
+    """
+    Full reset, including human reviews. Not used by the batch job.
+    """
+    with closing(get_connection()) as connection, connection:
+        connection.execute("DELETE FROM processed_invoices")
+
+
+# ---------------------------------------------------------------------------
+# Corrections
+# ---------------------------------------------------------------------------
+
+
 def save_corrections(
-    file_id: str, supplier_key: str, corrections: list[tuple[str, str | None, str | None]]) -> None:
+    file_id: str, supplier_key: str, corrections: list[tuple[str, str | None, str | None]]
+) -> None:
     with closing(get_connection()) as connection, connection:
         connection.executemany(
             """
@@ -139,3 +175,20 @@ def save_corrections(
             [(file_id, supplier_key, field_name, wrong_value, correct_value)
              for field_name, wrong_value, correct_value in corrections],
         )
+
+
+def get_corrections_for_supplier(supplier_key: str, limit: int = 10) -> list[tuple[str, str | None, str | None]]:
+    """
+    Most recent corrections first, as (field_name, wrong_value, correct_value).
+    """
+    with closing(get_connection()) as connection:
+        rows = connection.execute(
+            """
+            SELECT field_name, wrong_value, correct_value FROM corrections
+            WHERE supplier_key = ?
+            ORDER BY correction_id DESC
+            LIMIT ?
+            """,
+            (supplier_key, limit),
+        ).fetchall()
+    return [tuple(row) for row in rows]

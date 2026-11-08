@@ -5,7 +5,6 @@ Usage: python scripts/process_all.py
 from collections import Counter
 from pathlib import Path
 
-from invoicedesk.db import clear_processed_invoices
 from invoicedesk.pipeline import process_invoice
 from invoicedesk.validate import load_validation_context
 
@@ -14,7 +13,6 @@ DOCUMENT_SUFFIXES = {".pdf", ".jpg"}
 
 
 def main() -> None:
-    clear_processed_invoices()
     context = load_validation_context(DATA_DIR)
     document_paths = sorted(
         path for path in (DATA_DIR / "invoices").iterdir()

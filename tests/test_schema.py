@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from invoicedesk.schema import ExtractedInvoice, parse_date, to_invoice, to_money
+from invoicedesk.schema import ExtractedInvoice, parse_date, parse_printed_date, to_invoice, to_money
 
 ZERO_CONFIDENCE = {
     field: 0.0
@@ -28,8 +28,8 @@ def test_to_invoice_normalises():
         supplier_name=" Harbour Office Supplies Pty Ltd ",
         supplier_abn="68 036 828 486",
         invoice_number="HO-01764",
-        invoice_date="2026-10-08",
-        due_date="2026-11-07",
+        invoice_date_as_printed="08/10/2026",
+        due_date_as_printed="07/11/2026",
         po_number="",
         line_items=[{"description": "Toner", "quantity": 1, "unit_price": 129.0, "amount": 129.0}],
         subtotal=129.0,
@@ -43,3 +43,19 @@ def test_to_invoice_normalises():
     assert invoice.po_number is None
     assert invoice.gst == Decimal("12.90")
     assert invoice.total == Decimal("141.90")
+    assert invoice.invoice_date == date(2026, 10, 8)
+    assert invoice.due_date == date(2026, 11, 7)
+
+def test_slash_dates_follow_the_date_order():
+    assert parse_printed_date("09/03/2026") == date(2026, 3, 9)
+    assert parse_printed_date("09/03/2026", date_order="MDY") == date(2026, 9, 3)
+
+
+def test_unambiguous_formats_ignore_the_date_order():
+    assert parse_printed_date("18 Aug 2026", date_order="MDY") == date(2026, 8, 18)
+    assert parse_printed_date("2026-08-18", date_order="MDY") == date(2026, 8, 18)
+
+
+def test_unreadable_or_impossible_dates_are_none():
+    assert parse_printed_date("not a date") is None
+    assert parse_printed_date("31/02/2026") is None

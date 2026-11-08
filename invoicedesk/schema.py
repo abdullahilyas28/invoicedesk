@@ -3,12 +3,17 @@
 ExtractedInvoice is what the LLM fills in: JSON-friendly types plus a confidence per field.
 Invoice is what the rest of InvoiceDesk uses: exact Decimal money and real dates.
 """
-from datetime import date
+import re
+from datetime import date, datetime
 from decimal import Decimal
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
+
 CENT = Decimal("0.01")
+DateOrder = Literal["DMY", "MDY"]
+WORDED_DATE_FORMATS = ["%d %b %Y", "%d %B %Y"]
 
 
 class ExtractedLineItem(BaseModel):
@@ -35,8 +40,8 @@ class ExtractedInvoice(BaseModel):
     supplier_name: str
     supplier_abn: str = Field(description="11 digits, no spaces")
     invoice_number: str
-    invoice_date: str = Field(description="YYYY-MM-DD")
-    due_date: str = Field(description="YYYY-MM-DD")
+    invoice_date_as_printed: str = Field(description="The invoice date copied exactly as printed, character for character, e.g. 03/09/2026 or 18 Aug 2026")
+    due_date_as_printed: str = Field(description="The due date copied exactly as printed, character for character")
     po_number: str | None = Field(description="Purchase order number, or null if none is printed")
     line_items: list[ExtractedLineItem]
     subtotal: float = Field(description="Total before GST")
@@ -75,8 +80,34 @@ def parse_date(text: str) -> date | None:
     except ValueError:
         return None
 
+def parse_printed_date(printed_text: str, date_order: DateOrder = "DMY") -> date | None:
+    """
+    Parse a date as printed on an invoice. date_order only matters for ambiguous numeric dates.
+    """
+    text = printed_text.strip()
+    for worded_format in WORDED_DATE_FORMATS:
+        try:
+            return datetime.strptime(text, worded_format).date()
+        except ValueError:
+            pass
 
-def to_invoice(extracted: ExtractedInvoice) -> Invoice:
+    parts = re.split(r"[/.\-]", text)
+    if len(parts) != 3 or not all(part.isdigit() for part in parts):
+        return None
+    first, second, third = (int(part) for part in parts)
+    if len(parts[0]) == 4:
+        year, month, day = first, second, third
+    elif date_order == "MDY":
+        month, day, year = first, second, third
+    else:
+        day, month, year = first, second, third
+
+    try:
+        return date(year, month, day)
+    except ValueError:
+        return None
+
+def to_invoice(extracted: ExtractedInvoice, date_order: DateOrder = "DMY") -> Invoice:
     """
     Convert raw LLM output into exact domain types, normalising formatting on the way.
     """
@@ -84,8 +115,8 @@ def to_invoice(extracted: ExtractedInvoice) -> Invoice:
         supplier_name=extracted.supplier_name.strip(),
         supplier_abn=extracted.supplier_abn.replace(" ", ""),
         invoice_number=extracted.invoice_number.strip(),
-        invoice_date=parse_date(extracted.invoice_date),
-        due_date=parse_date(extracted.due_date),
+        invoice_date=parse_printed_date(extracted.invoice_date_as_printed, date_order),
+        due_date=parse_printed_date(extracted.due_date_as_printed, date_order),
         po_number=extracted.po_number.strip() if extracted.po_number else None,
         line_items=[
             LineItem(

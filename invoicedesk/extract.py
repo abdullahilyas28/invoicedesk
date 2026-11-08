@@ -27,15 +27,20 @@ class ExtractionResult:
     confidence: FieldConfidence
     llm_result: LLMResult
     from_cache: bool
+    used_memory: bool = False
 
 
-def make_cache_key(document_path: Path, run_number: int) -> str:
+def make_cache_key(document_path: Path, run_number: int, memory_instructions: str) -> str:
     document_hash = hashlib.sha256(Path(document_path).read_bytes()).hexdigest()
-    return f"{document_hash}:{MODEL_NAME}:{PROMPT_VERSION}:run{run_number}"
+    cache_key = f"{document_hash}:{MODEL_NAME}:{PROMPT_VERSION}:run{run_number}"
+    if memory_instructions:
+        memory_hash = hashlib.sha256(memory_instructions.encode()).hexdigest()[:16]
+        cache_key += f":memory-{memory_hash}"
+    return cache_key
 
 
-def extract_invoice(document_path: str | Path, run_number: int = 1) -> ExtractionResult:
-    cache_key = make_cache_key(document_path, run_number)
+def extract_invoice(document_path: str | Path, run_number: int = 1, memory_instructions: str = "") -> ExtractionResult:
+    cache_key = make_cache_key(document_path, run_number, memory_instructions)
     cached_row = get_cached_response(cache_key)
 
     if cached_row is not None:
@@ -49,7 +54,8 @@ def extract_invoice(document_path: str | Path, run_number: int = 1) -> Extractio
         )
         from_cache = True
     else:
-        llm_result = generate(EXTRACTION_PROMPT, file_path=document_path, schema=ExtractedInvoice)
+        prompt = EXTRACTION_PROMPT + memory_instructions
+        llm_result = generate(prompt, file_path=document_path, schema=ExtractedInvoice)
         if llm_result.parsed is None:
             raise ValueError(f"No parseable invoice for {document_path}: {llm_result.text[:200]}")
         save_cached_response(
@@ -68,4 +74,5 @@ def extract_invoice(document_path: str | Path, run_number: int = 1) -> Extractio
         confidence=extracted.confidence,
         llm_result=llm_result,
         from_cache=from_cache,
+        used_memory=bool(memory_instructions),
     )

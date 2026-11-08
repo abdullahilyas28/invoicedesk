@@ -1,7 +1,7 @@
 from datetime import date
 from decimal import Decimal
 
-from invoicedesk.memory import find_corrections
+from invoicedesk.memory import build_memory_instructions, find_corrections, is_day_month_swap
 from invoicedesk.schema import Invoice, LineItem
 
 
@@ -33,3 +33,41 @@ def test_changed_dates_become_corrections():
         ("invoice_date", "2026-04-09", "2026-09-04"),
         ("due_date", "2026-11-09", "2026-09-11"),
     ]
+
+def test_no_corrections_means_no_memory_instructions():
+    assert build_memory_instructions([]) == ""
+
+
+def test_memory_instructions_include_each_correction():
+    instructions = build_memory_instructions([("invoice_date", "2026-04-09", "2026-09-04")])
+    assert "invoice_date" in instructions
+    assert "'2026-04-09'" in instructions
+    assert "'2026-09-04'" in instructions
+
+IRONBARK_DATE_CORRECTIONS = [
+    ("invoice_date", "2026-05-08", "2026-08-05"),
+    ("due_date", "2026-12-08", "2026-08-12"),
+    ("invoice_date", "2026-04-09", "2026-09-04"),
+    ("due_date", "2026-11-09", "2026-09-11"),
+]
+
+
+def test_day_month_swap_detected():
+    assert is_day_month_swap("2026-04-09", "2026-09-04")
+
+
+def test_other_date_fixes_are_not_swaps():
+    assert not is_day_month_swap("2026-04-09", "2026-04-10")
+    assert not is_day_month_swap("2026-10-10", "2026-10-10")
+
+
+def test_repeated_swaps_become_a_month_first_rule():
+    instructions = build_memory_instructions(IRONBARK_DATE_CORRECTIONS)
+    assert "MONTH FIRST" in instructions
+    assert "2026-05-08" not in instructions
+
+
+def test_examples_strategy_keeps_raw_corrections():
+    instructions = build_memory_instructions(IRONBARK_DATE_CORRECTIONS, strategy="examples")
+    assert "MONTH FIRST" not in instructions
+    assert "2026-05-08" in instructions
