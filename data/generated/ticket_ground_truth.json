@@ -1,0 +1,407 @@
+[
+  {
+    "ticket_id": "T001",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_052",
+      "must_mention": [
+        [
+          "PAY-00025"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T002",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_002",
+      "must_mention": [
+        [
+          "2026-11-02",
+          "2 November 2026",
+          "2 Nov 2026",
+          "02/11/2026"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T003",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_033"
+    }
+  },
+  {
+    "ticket_id": "T004",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T005",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_040",
+      "must_mention": [
+        [
+          "total"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T006",
+    "type": "short_payment",
+    "expected": {
+      "action": "credit",
+      "invoice_id": "inv_032",
+      "credit_amount": "40.00",
+      "must_mention": [
+        [
+          "40.00"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T007",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_004",
+      "must_mention": [
+        [
+          "2026-11-20",
+          "20 November 2026",
+          "20 Nov 2026",
+          "20/11/2026"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T008",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_001",
+      "must_mention": [
+        [
+          "ABN"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T009",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_042"
+    }
+  },
+  {
+    "ticket_id": "T010",
+    "type": "short_payment",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_005",
+      "must_mention": [
+        [
+          "in full",
+          "full amount",
+          "fully paid"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T011",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_019",
+      "must_mention": [
+        [
+          "subtotal"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T012",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T013",
+    "type": "short_payment",
+    "expected": {
+      "action": "credit",
+      "invoice_id": "inv_049",
+      "credit_amount": "125.50",
+      "must_mention": [
+        [
+          "125.50"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T014",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_021"
+    }
+  },
+  {
+    "ticket_id": "T015",
+    "type": "short_payment",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_023"
+    }
+  },
+  {
+    "ticket_id": "T016",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_008"
+    }
+  },
+  {
+    "ticket_id": "T017",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T018",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T019",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_022"
+    }
+  },
+  {
+    "ticket_id": "T020",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T021",
+    "type": "short_payment",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_017"
+    }
+  },
+  {
+    "ticket_id": "T022",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_051",
+      "must_mention": [
+        [
+          "PAY-00024"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T023",
+    "type": "invoice_not_found",
+    "expected": {
+      "action": "answer",
+      "invoice_id": null,
+      "must_mention": [
+        [
+          "not found",
+          "couldn't find",
+          "could not find",
+          "can't find",
+          "cannot find",
+          "no record",
+          "unable to find",
+          "unable to locate"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T024",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_053",
+      "must_mention": [
+        [
+          "PAY-00026"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T025",
+    "type": "payment_status",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_048",
+      "must_mention": [
+        [
+          "PAY-00021"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T026",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_027",
+      "must_mention": [
+        [
+          "line"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T027",
+    "type": "short_payment",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_035",
+      "must_mention": [
+        [
+          "in full",
+          "full amount",
+          "fully paid"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T028",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_003",
+      "must_mention": [
+        [
+          "PO",
+          "purchase order"
+        ]
+      ]
+    }
+  },
+  {
+    "ticket_id": "T029",
+    "type": "needs_human",
+    "expected": {
+      "action": "escalate",
+      "invoice_id": "inv_048"
+    }
+  },
+  {
+    "ticket_id": "T030",
+    "type": "invoice_on_hold",
+    "expected": {
+      "action": "answer",
+      "invoice_id": "inv_018",
+      "must_mention": [
+        [
+          "due date"
+        ]
+      ]
+    }
+  }
+]

@@ -9,6 +9,7 @@ from contextlib import closing
 from datetime import date
 from decimal import Decimal
 from pathlib import Path
+from collections import Counter
 
 from invoicedesk.backend import BACKEND_DB_PATH, get_backend_connection
 
@@ -53,7 +54,12 @@ def main() -> None:
             printed["subtotal"], printed["total"], status, hold_reason,
         ))
 
-    paid_invoice_ids = sorted(payments_by_invoice)
+    number_counts = Counter(record["printed"]["invoice_number"] for record in ground_truth_records)
+    unique_number_ids = {
+        record["file_id"] for record in ground_truth_records
+        if number_counts[record["printed"]["invoice_number"]] == 1
+    }
+    paid_invoice_ids = sorted(invoice_id for invoice_id in payments_by_invoice if invoice_id in unique_number_ids)
     small_candidates = [invoice_id for invoice_id in paid_invoice_ids if payments_by_invoice[invoice_id][0] > Decimal("300")]
     large_candidates = [invoice_id for invoice_id in paid_invoice_ids if payments_by_invoice[invoice_id][0] > Decimal("1200")]
     large_short_paid = rng.sample(large_candidates, len(LARGE_SHORTFALLS))
