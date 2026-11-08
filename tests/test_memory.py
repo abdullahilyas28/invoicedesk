@@ -1,7 +1,12 @@
 from datetime import date
 from decimal import Decimal
 
-from invoicedesk.memory import build_memory_instructions, find_corrections, is_day_month_swap
+from invoicedesk.memory import (
+    build_memory_instructions,
+    find_corrections,
+    has_month_first_pattern,
+    is_day_month_swap,
+)
 from invoicedesk.schema import Invoice, LineItem
 
 
@@ -61,10 +66,13 @@ def test_other_date_fixes_are_not_swaps():
     assert not is_day_month_swap("2026-10-10", "2026-10-10")
 
 
-def test_repeated_swaps_become_a_month_first_rule():
-    instructions = build_memory_instructions(IRONBARK_DATE_CORRECTIONS)
-    assert "MONTH FIRST" in instructions
-    assert "2026-05-08" not in instructions
+def test_month_first_pattern_needs_repeated_swaps():
+    assert has_month_first_pattern(IRONBARK_DATE_CORRECTIONS)
+    assert not has_month_first_pattern(IRONBARK_DATE_CORRECTIONS[:1])
+
+
+def test_corrections_explained_by_the_profile_stay_out_of_the_prompt():
+    assert build_memory_instructions(IRONBARK_DATE_CORRECTIONS) == ""
 
 
 def test_examples_strategy_keeps_raw_corrections():

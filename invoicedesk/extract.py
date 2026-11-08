@@ -5,15 +5,15 @@ from pathlib import Path
 
 from invoicedesk.db import get_cached_response, save_cached_response
 from invoicedesk.llm import MODEL_NAME, LLMResult, generate
-from invoicedesk.schema import ExtractedInvoice, FieldConfidence, Invoice, to_invoice
+from invoicedesk.schema import DateOrder, ExtractedInvoice, FieldConfidence, Invoice, to_invoice
 
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 
 EXTRACTION_PROMPT = """You are extracting data from a supplier invoice received by an Australian company.
 
 Rules:
 - Copy every value exactly as printed. Do not correct or recalculate anything, even if the maths looks wrong.
-- Dates on these invoices are Australian, day before month: 03/09/2026 means 3 September 2026. Output dates as YYYY-MM-DD.
+- Copy dates exactly as printed, character for character, for example 09/03/2026 or 18 Aug 2026. Do not reformat, reorder or convert them.
 - Output money as plain numbers with no $ sign or commas, for example 1173.43.
 - Output the ABN as the 11 digits exactly as printed, without spaces, even if it looks invalid.
 - If a field is not printed on the invoice (for example there is no PO number), use null. Never invent a value.
@@ -39,7 +39,12 @@ def make_cache_key(document_path: Path, run_number: int, memory_instructions: st
     return cache_key
 
 
-def extract_invoice(document_path: str | Path, run_number: int = 1, memory_instructions: str = "") -> ExtractionResult:
+def extract_invoice(
+    document_path: str | Path,
+    run_number: int = 1,
+    memory_instructions: str = "",
+    date_order: DateOrder = "DMY",
+) -> ExtractionResult:
     cache_key = make_cache_key(document_path, run_number, memory_instructions)
     cached_row = get_cached_response(cache_key)
 
@@ -70,9 +75,9 @@ def extract_invoice(document_path: str | Path, run_number: int = 1, memory_instr
 
     extracted = llm_result.parsed
     return ExtractionResult(
-        invoice=to_invoice(extracted),
+        invoice=to_invoice(extracted, date_order),
         confidence=extracted.confidence,
         llm_result=llm_result,
         from_cache=from_cache,
-        used_memory=bool(memory_instructions),
+        used_memory=bool(memory_instructions) or date_order != "DMY",
     )
