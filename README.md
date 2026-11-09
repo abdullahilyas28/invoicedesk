@@ -25,6 +25,10 @@ From [`evals/report.md`](evals/report.md), on 53 synthetic invoices and 30 synth
 | Escalation precision / recall | 8/8 / 8/8 |
 | Credits issued that weren't owed | 0 |
 
+| Review queue | Agent tool-call trace | Evaluation |
+|---|---|---|
+| ![Review screen](docs/review.png) | ![Ticket trace](docs/ticket-trace.png) | ![Eval page](docs/eval.png) |
+
 ## Try it in 60 seconds
 
 1. Open the [live demo](https://invoicedesk.streamlit.app) and press **Process the inbox**: 21 invoices are auto-approved and 32 go to review.
